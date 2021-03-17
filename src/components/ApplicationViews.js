@@ -1,8 +1,8 @@
 import React from "react"
 import { Route } from "react-router-dom"
 import { LibraryProvider } from './library/LibraryProvider'
-import { Library } from './library/Library'
 import { LibraryList } from './library/LibraryList'
+import { LibraryForm } from "./library/LibraryForm"
 
 export const ApplicationViews = () => {
     return (
@@ -10,6 +10,9 @@ export const ApplicationViews = () => {
         <LibraryProvider>
         <Route exact path="/">
             <LibraryList />
+        </Route>
+        <Route path="/create">
+            <LibraryForm />
         </Route>
         </LibraryProvider>
         
