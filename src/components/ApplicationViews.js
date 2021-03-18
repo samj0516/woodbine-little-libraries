@@ -14,6 +14,9 @@ export const ApplicationViews = () => {
         <Route path="/create">
             <LibraryForm />
         </Route>
+        <Route exact path="/edit/:libraryId(\d+)">
+            <LibraryForm />
+        </Route>
         </LibraryProvider>
         
         </>
