@@ -50,7 +50,7 @@ export const LibraryForm = () => {
                 address: library.address,
                 charterNumber: library.charterNumber
             })
-            .then(() => history.push('/libraries'))
+            .then(() => history.push('/'))
         }else {
             addLibrary({
                 userId: currentUser,
