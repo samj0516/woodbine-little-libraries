@@ -35,7 +35,7 @@ export const LibraryProvider = (props) => {
     }
 
     const updateLibrary = library => {
-        return fetch(`http://localhost:8088/tasks/${library.id}`, {
+        return fetch(`http://localhost:8088/libraries/${library.id}`, {
           method: "PUT",
           headers: {
             "Content-Type": "application/json"
