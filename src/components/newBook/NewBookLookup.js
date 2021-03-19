@@ -16,7 +16,7 @@ export const NewBookLookup = () => {
     const handleNewBookLookup = () => {
       console.log(isbn)
       getNewBook(isbn)
-      .then((data) => setNewBook(data))
+    //   .then((data) => setNewBook(data))
       .then(() => history.push('/addPreview'))
       
     }

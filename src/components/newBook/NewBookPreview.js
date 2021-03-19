@@ -3,12 +3,14 @@ import { NewBookContext } from './NewBookProvider'
 import { BookContext } from '../book/BookProvider'
 
 export const NewBookPreview = () => {
-    const { newBook } = useContext(NewBookContext)
+    const { newBook, isbn } = useContext(NewBookContext)
     const { updateBook, getBooks, addBook} = useContext(BookContext)
-
-    return(
+    console.log(newBook)
+    
+    
+    return( 
         <>
-        <h1>{newBook}</h1>
+        <h1>{newBook.title}</h1>
         </>
     )
 }
