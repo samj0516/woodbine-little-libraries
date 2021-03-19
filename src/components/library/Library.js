@@ -22,6 +22,11 @@ export const Library = ({ library }) => {
                 history.push(`/edit/${library.id}`)
             }}>Edit my library</button> : <div></div>}
             </div>
+            <div>
+                <button onClick={() => {
+                history.push(`/add`)
+            }}>Add A Book</button> 
+            </div>
         </section>
         </>
     )
