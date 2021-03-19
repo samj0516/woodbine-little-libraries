@@ -1,0 +1,16 @@
+.libraries {
+    display: flex;
+    /* flex-wrap: wrap; */
+    justify-content: space-between;
+    flex-direction: column;
+}
+  
+.library {
+      flex-basis: 28%;
+      margin: 1em;
+      padding: 1em;
+      border: 1px solid goldenrod;
+      width: 300px;
+      align-self: center;
+      justify-content: center;
+}
