@@ -27,7 +27,7 @@ export const ApplicationViews = () => {
                 <NewBookLookup />
             </Route>
             <Route path='/addPreview'>
-                <NewBookPreview />
+                <NewBookPreview  />
             </Route>
         </NewBookProvider>
         </LibraryProvider>

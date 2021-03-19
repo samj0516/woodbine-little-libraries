@@ -8,7 +8,7 @@ export const NewBookPreview = () => {
 
     return(
         <>
-        <h1>{newBook.title}</h1>
+        <h1>{newBook}</h1>
         </>
     )
 }

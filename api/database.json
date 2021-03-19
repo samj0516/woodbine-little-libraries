@@ -1,0 +1,60 @@
+{
+    "users": [
+      {
+        "name": "Samantha Campbell",
+        "email": "samj0516@gmail.com",
+        "id": 1
+      },
+      {
+        "email": "nut_hoarder03@bmail.com",
+        "name": "Sandy Squirrel",
+        "id": 2
+      },
+      {
+        "email": "lucy.lawless@bmail.com",
+        "name": "Lucy Lawless",
+        "id": 3
+      }
+    ],
+    "libraries": [
+      {
+        "id": 1,
+        "userId": 1,
+        "name": "Lutie Street Little Library",
+        "address": "205 Lutie Street, Nashville TN 37210",
+        "charterNumber": "333123"
+      },
+      {
+        "id": 2,
+        "userId": 3,
+        "name": "Peachtree",
+        "address": "220 Peachtree St.",
+        "charterNumber": "65789"
+      }
+    ],
+    "books": [
+      {
+        "id": 1,
+        "libraryId": 1,
+        "userId": 1,
+        "deleted": false,
+        "title": "White shadows",
+        "author": "Susan Edwards",
+        "cover": {
+          "small": "https://covers.openlibrary.org/b/id/641076-S.jpg",
+          "medium": "https://covers.openlibrary.org/b/id/641076-M.jpg",
+          "large": "https://covers.openlibrary.org/b/id/641076-L.jpg"
+        },
+        "isbn": "0843951095",
+        "url": "https://openlibrary.org/books/OL3386379M/White_shadows"
+      }
+    ],
+    "takenBooks": [
+      {
+        "id": 1,
+        "bookId": 1,
+        "userId": 1,
+        "dateTaken": "2021-03-14"
+      }
+    ]
+  }
