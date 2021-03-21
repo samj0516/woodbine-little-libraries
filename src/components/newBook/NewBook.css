@@ -1,0 +1,49 @@
+.newBookPreview {
+    border: 1px solid black;
+    border-radius: 10px;
+    margin: 5em;
+    padding: 2em;
+    display: flex;
+    width: 500px;
+    justify-content: space-between;
+    flex-direction: column;
+    background-color:#e8c2ca;
+    
+} 
+.newBookPreview button {
+    width: 50%;
+    align-self: center;
+}
+
+.newBookPreviewCard {
+    border: .5px dotted black;
+    border-radius: 10px;
+    display: flex;
+    /* flex-wrap: wrap; */
+    flex-direction: column;
+    padding: .5em;
+    margin:.5em;
+    justify-content: center;
+    align-self: center;
+    
+}
+
+/* display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0, auto;  */
+
+
+
+    /* .newBookPreviewCard
+    flex-basis: 28%;
+    align-items: baseline;
+    background-color:#d1b3c4;
+    flex-basis: 28%;
+    margin: 1em;
+    padding: 1em;
+    border: 1px solid goldenrod;
+    width: 500px;
+    align-self: center;
+    justify-content: center; */

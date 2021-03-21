@@ -24,7 +24,7 @@ export const Library = ({ library }) => {
             </div>
             <div>
                 <button onClick={() => {
-                history.push(`/add`)
+                history.push(`/add/${library.id}`)
             }}>Add A Book</button> 
             </div>
         </section>

@@ -12,10 +12,6 @@ export const NewBookProvider = (props) => {
         .then(res => res.json())
         .then((data) => 
             setNewBook(data[`ISBN:${isbn}`]))
-        
-        
-        
-        
     }
    
 
