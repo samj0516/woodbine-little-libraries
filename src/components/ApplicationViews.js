@@ -29,10 +29,10 @@ export const ApplicationViews = () => {
         </Route>
 
         <NewBookProvider>
-            <Route path="/add">
+            <Route path="/add/:libraryId(\d+)">
                 <NewBookLookup />
             </Route>
-            <Route path='/addPreview'>
+            <Route path='/addPreview/:libraryId(\d+)'>
                 <NewBookPreview  />
             </Route>
         </NewBookProvider>

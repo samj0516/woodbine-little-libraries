@@ -7,17 +7,19 @@ export const NewBookPreview = () => {
     const { updateBook, getBooks, addBook } = useContext(BookContext)
     const { libraryId } = useParams()
     console.log(newBook)
-    let bookCover = newBook.cover.large
+    let bookCoverLg = newBook.cover.large
+    let bookCoverMed = newBook.cover.medium
     
     const handleAddNewBook = () => {
         let currentUser = parseInt(sessionStorage.getItem("app_user_id"))
         addBook({
             userId: currentUser,
-            libraryId: libraryId,
+            libraryId: parseInt(libraryId),
             deleted: false,
             title: newBook.title,
             author: newBook.authors[0].name,
-            cover: newBook.cover,
+            coverMed: bookCoverMed,
+            coverLarge: bookCoverLg,
             isbn: isbn,
             url: newBook.url,
             pages: newBook.number_of_pages
@@ -32,7 +34,7 @@ export const NewBookPreview = () => {
                 <h1>{newBook.title}</h1>
                 <h3>By: {newBook.authors[0].name}</h3>
                 <a href={newBook.url} target="_blank">
-                    <img src={bookCover} alt="Cover of book" />
+                    <img src={bookCoverLg} alt="Cover of book" />
                 </a>
                 <p>{newBook.number_of_pages} pages</p>
                 <p>Click book cover for more information</p>

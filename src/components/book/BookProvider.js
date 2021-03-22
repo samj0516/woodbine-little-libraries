@@ -6,7 +6,7 @@ export const BookProvider = (props) => {
     const [books, setBooks] = useState([])
 
     const getBooks = () => {
-        return fetch("http://localhost:8088/books?_expand=libraries&_expand=users")
+        return fetch("http://localhost:8088/books")
         .then(res => res.json())
         .then(setBooks)
     }
@@ -19,6 +19,7 @@ export const BookProvider = (props) => {
             },
             body: JSON.stringify(bookObj)
         })
+        .then(getBooks)
     }
 
     const getBookById = (id) => {
