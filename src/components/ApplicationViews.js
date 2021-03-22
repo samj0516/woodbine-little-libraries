@@ -7,6 +7,9 @@ import { NewBookProvider } from './newBook/NewBookProvider'
 import { NewBookLookup } from './newBook/NewBookLookup'
 import { BookProvider } from './book/BookProvider'
 import { NewBookPreview } from "./newBook/NewBookPreview"
+import { LibraryDetail } from './library/LibraryDetails'
+
+
 export const ApplicationViews = () => {
     return (
         <>
@@ -21,12 +24,15 @@ export const ApplicationViews = () => {
         <Route path="/edit/:libraryId(\d+)">
             <LibraryForm />
         </Route>
+        <Route path="/detail/:libraryId(\d+)">
+            <LibraryDetail />
+        </Route>
 
         <NewBookProvider>
-            <Route path="/add">
+            <Route path="/add/:libraryId(\d+)">
                 <NewBookLookup />
             </Route>
-            <Route path='/addPreview'>
+            <Route path='/addPreview/:libraryId(\d+)'>
                 <NewBookPreview  />
             </Route>
         </NewBookProvider>

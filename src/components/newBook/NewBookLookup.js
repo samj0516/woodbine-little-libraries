@@ -1,12 +1,12 @@
 import React, { useContext, useEffect, useState } from "react"
-import { useHistory } from 'react-router-dom';
+import { useHistory, useParams } from 'react-router-dom';
 import { NewBookContext } from './NewBookProvider'
 import './NewBook.css'
 
 export const NewBookLookup = () => {
     const { setNewBook, newBook, getNewBook, isbn, setIsbn } = useContext(NewBookContext)
     const history = useHistory()
-
+    const { libraryId } = useParams()
     const handleInputChange = (event) => {
         const newIsbn = parseInt(event.target.value)
         setIsbn(newIsbn)
@@ -17,7 +17,7 @@ export const NewBookLookup = () => {
       console.log(isbn)
       getNewBook(isbn)
     //   .then((data) => setNewBook(data))
-      .then(() => history.push('/addPreview'))
+      .then(() => history.push(`/addPreview/${libraryId}`))
       
     }
     
