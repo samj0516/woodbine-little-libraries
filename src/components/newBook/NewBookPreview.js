@@ -34,8 +34,9 @@ export const NewBookPreview = () => {
                 <a href={newBook.url} target="_blank">
                     <img src={bookCover} alt="Cover of book" />
                 </a>
-                <p>Click book cover for more information</p>
                 <p>{newBook.number_of_pages} pages</p>
+                <p>Click book cover for more information</p>
+                
             </div>
             <button onClick={event => {
                 event.preventDefault()
