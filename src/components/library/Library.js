@@ -10,7 +10,10 @@ export const Library = ({ library }) => {
     const { getLibraries, updateLibrary, deleteLibrary} = useContext(LibraryContext)
     let currentUser = parseInt(sessionStorage.getItem('app_user_id'))
     const { libraryId } = useParams()
-
+    
+    const handleDelete = () => {
+        deleteLibrary(library.id)
+    }
     return(
         <>
         <section className="library">
@@ -25,10 +28,10 @@ export const Library = ({ library }) => {
             }}>Edit my library</button> : <div></div>}
             </div>
             <div>
-                <button onClick={() => {
-                history.push(`/add/${library.id}`)
-            }}>Add A Book</button> 
+                {currentUser === library.userId ?  <button onClick={handleDelete}
+            >Delete my library</button> : <div></div>}
             </div>
+            
         </section>
         </>
     )

@@ -18,6 +18,7 @@ export const LibraryDetail = () => {
   let libraryBooks = books.filter(book => parseInt(libraryId) === book.libraryId)
 
   return(<>
+    <button onClick={() => {history.push(`/add/${libraryId}`)}}>+ Add Book</button>
     <section className="bookList">
         {
             libraryBooks.map(book => !book.deleted ?

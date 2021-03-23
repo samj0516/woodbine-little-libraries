@@ -58,6 +58,7 @@ export const LibraryForm = () => {
                 address: library.address,
                 charterNumber: library.charterNumber
             })
+            .then(() => history.push('/'))
         }
     }
 

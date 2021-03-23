@@ -4,6 +4,7 @@ export const BookContext = createContext()
 
 export const BookProvider = (props) => {
     const [books, setBooks] = useState([])
+    const [takenBooks, setTakenBooks] = useState([])
 
     const getBooks = () => {
         return fetch("http://localhost:8088/books")
@@ -38,8 +39,25 @@ export const BookProvider = (props) => {
         .then(getBooks)
     }
 
+    const addTakenBook = (takenObj) => {
+        return fetch("http://localhost:8088/takenBooks", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(takenObj)
+        })
+        .then(getTakenBooks)
+    }
+
+    const getTakenBooks = () => {
+        return fetch("http://localhost:8088/takenBooks")
+        .then(res => res.json())
+        .then(setTakenBooks)
+    }
+
     return(
-        <BookContext.Provider value={{ setBooks, books, getBooks, addBook, getBookById, updateBook}}>
+        <BookContext.Provider value={{ setBooks, books, getBooks, addBook, getBookById, updateBook, addTakenBook, takenBooks}}>
             {props.children}
         </BookContext.Provider>
     )
