@@ -23,6 +23,7 @@ export const ApplicationViews = () => {
         </Route>
         <Route path="/edit/:libraryId(\d+)">
             <LibraryForm />
+            <LibraryDetail />
         </Route>
         <Route path="/detail/:libraryId(\d+)">
             <LibraryDetail />
