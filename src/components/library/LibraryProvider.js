@@ -6,7 +6,7 @@ export const LibraryProvider = (props) => {
     const [libraries, setLibraries] = useState([])
 
     const getLibraries = () => {
-        return fetch("http://localhost:8088/libraries")
+        return fetch("http://localhost:8088/libraries?_expand=user")
         .then(res => res.json())
         .then(setLibraries)
     }

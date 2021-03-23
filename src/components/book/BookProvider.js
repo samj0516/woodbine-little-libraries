@@ -7,7 +7,7 @@ export const BookProvider = (props) => {
     const [takenBooks, setTakenBooks] = useState([])
 
     const getBooks = () => {
-        return fetch("http://localhost:8088/books")
+        return fetch("http://localhost:8088/books?_expand=user")
         .then(res => res.json())
         .then(setBooks)
     }
