@@ -5,7 +5,8 @@ import { Register } from "./auth/Register"
 import { userStorageKey } from "./auth/authSettings"
 import { ApplicationViews } from './ApplicationViews'
 import { NavBar } from './nav/Nav.js'
-
+// import 'bulma/css/bulma.css'
+import '../css/mystyles.css'
 export const LittleLibrary = () => (
   <>
 <Route render={() => {

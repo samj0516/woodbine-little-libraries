@@ -16,22 +16,25 @@ export const Library = ({ library }) => {
     }
     return(
         <>
-        <section className="library">
+        <section className="card library">
             <Link to={`/detail/${library.id}`}>
-                <h4 className="library__name">{library.name}</h4>
+                <h4 className="card-title library__name">{library.name}</h4>
             </Link>
+            <div className="card-content">
             <div className="library__address">{library.address}</div>
             <div className="library__charter">Charter# {library.charterNumber}</div>
-            <div>
+            </div>
+            <footer className="card-footer">
+            <div className="card-footer-item">
                 {currentUser === library.userId ?  <button onClick={() => {
                 history.push(`/edit/${library.id}`)
             }}>Edit my library</button> : <div></div>}
             </div>
-            <div>
+            <div className="card-footer-item">
                 {currentUser === library.userId ?  <button onClick={handleDelete}
             >Delete my library</button> : <div></div>}
             </div>
-            
+            </footer>
         </section>
         </>
     )

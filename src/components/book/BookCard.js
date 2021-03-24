@@ -2,7 +2,7 @@ import React, { useContext, useState } from "react"
 import { BookContext } from './BookProvider'
 import { useHistory, useParams, Route } from 'react-router-dom'
 import './BookCard.css'
-
+// import "bulma/css/bulma.css"
 export const BookCard = ({ book }) => {
     const history = useHistory()
     const { getBooks, books, updateBook, addTakenBook } = useContext(BookContext)
@@ -32,7 +32,7 @@ export const BookCard = ({ book }) => {
     }
 
     return(<>
-    <section className="bookCard">
+    <section className="card bookCard">
         <h4 className="bookCard__title">{book.title}</h4>
         <p>{book.author}</p>
         <a href={book.url} target="_blank">
