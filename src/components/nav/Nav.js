@@ -6,13 +6,14 @@ import '../../css/mystyles.css'
 export const NavBar = (props) => {
     return (
 <>
-    <hr className="deco-line-orange"></hr>
+    <div className="deco-line-teal"></div>
+    <div className="deco-line-orange"></div>
     <header className="header level is-small">
-        <figure className="image level">
+        <figure className="image level has-text-centered-touch">
             <img src="../lfl-logo_50.png" alt="little free library logo" />
         </figure>
         
-       <h1 className="title">Woodbine's Little Libraries</h1> 
+       <h1 className="title is-size-1-touch is-size-2-mobile has-text-centered-touch">Woodbine's Little Libraries</h1> 
        
     </header><hr className="deco-line"></hr>
     <nav className="navbar" role="navigation" aria-label="main navigation">
@@ -29,7 +30,7 @@ export const NavBar = (props) => {
 
            
         
-    </nav>
+    </nav><hr className="deco-line-liver"></hr>
 </>
     )
 }

@@ -25,36 +25,130 @@ html {
 }
 header{
     padding-bottom: -10em;
-    margin-bottom: -10em;
+    margin-bottom: -20em;
+    margin-top: -1em;
     background-color: $mustard;
    
 }
 
 .header{
     justify-content: flex-start;
+    flex-wrap: nowrap;
     
     .title{
         align-self: flex-end;
-        padding-bottom: 1em;
-        padding-left: .5em;
+        padding-bottom: 1.4em;
+        padding-left: 1em;
         font-family: pattaya;
-        font-weight: 250;
-        font-size: 38pt;;
+        font-weight: 300;
+        font-size: 45pt;;
         color: $liver;
+        flex-shrink: 10;
     }
     img{
         padding: 1em;
+        padding-left: 2em;
+        max-width: 300px;
     }
 }
-.deco-line{
+.deco-line-teal{
     height:2em;
+    background-color: $teal;
+    margin-top: -5px;
+    margin-bottom: -10px;
+     
+}
+.deco-line-orange{
+    height:2em;
+    background-color: $orange;
+    margin-top: -5px;
+    margin-bottom: -10px;
+     
+}
+.deco-line{
+    height:1.5em;
     background-color: $rose;
     padding-top: -10px;
     margin-top: -25px;
 }
+
 .navbar{
     background-color: $teal;
     font-family: montserrat;
     color: $liver;
     margin-top: -25px;
+    height: 1.5em;
+}
+.deco-line-liver{
+    height:2em;
+    background-color: $liver;
+    margin-top: -10px;
+    // margin-bottom: 10px;
+}
+.libraries{
+    display:flex;
+    flex-direction: column;
+    background-color: $green;
+    height: 80%;
+    width: 80%;
+    margin: 0 auto;
+    border-radius: 15pt;
+    border: 1pt solid $liver;
+    .subtitle{
+        font-family: pattaya;
+        color: $liver;
+        font-weight: 100;
+        padding-top: 1em;
+    }
+}
+.library{
+    background-color: $rose;
+    border-radius: 15pt;
+    font-family: montserrat;
+    
+    color: $liver;
+    border: 1pt solid $liver;
+    .card-title{
+        color: $liver;
+        font-weight: bold;
+    }
+    .card-title:hover {
+        color: $teal;
+    }
+    button{
+        margin: .2em;
+    }
+}
+.bookList{
+    display:flex;
+    flex-direction: row;
+    background-color: $rose;
+    height: 80%;
+    width: 80%;
+    margin: 0 auto;
+    border-radius: 15pt;
+    border: 1pt solid $liver;
+    .buttonContainer{
+        justify-content: center;
+        width: 100%;
+        button{
+            background-color: $orange;
+            align-self: center;
+            margin-top: .5em;
+            border: 1pt solid $liver;
+            color: $liver;
+        }
+    }
+    
+}
+.bookCard{
+    width:250px;
+    max-height: 402px;
+    min-height: 400px;
+    padding: .7em;
+    padding-bottom: 1em;
+    border-radius: 15pt;
+    border: 1pt solid $liver;
+    font-family: Montserrat;
+    background-color: $teal;
 }

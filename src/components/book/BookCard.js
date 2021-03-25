@@ -33,7 +33,7 @@ export const BookCard = ({ book }) => {
 
     return(<>
     <section className="card bookCard">
-        <h4 className="bookCard__title">{book.title}</h4>
+        <h4 className="bookCard__title has-text-weight-semibold">{book.title}</h4>
         <p>{book.author}</p>
         <a href={book.url} target="_blank">
             <img src={book.coverMed} alt="Book Cover" />

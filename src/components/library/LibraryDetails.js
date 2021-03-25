@@ -18,8 +18,11 @@ export const LibraryDetail = () => {
   let libraryBooks = books.filter(book => parseInt(libraryId) === book.libraryId)
 
   return(<>
-    <button onClick={() => {history.push(`/add/${libraryId}`)}}>+ Add Book</button>
+    
     <section className="bookList">
+      <div className="buttonContainer is-flex is-justify-content-center">
+    <button className="button is-medium has-text-centered" onClick={() => {history.push(`/add/${libraryId}`)}}>+ Add Book</button>
+    </div>
         {
             libraryBooks.map(book => !book.deleted ?
                  <BookCard key={book.id} book={book} /> : <div key={book.id}></div>)

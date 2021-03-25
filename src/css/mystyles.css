@@ -7770,24 +7770,41 @@ html {
 
 header {
   padding-bottom: -10em;
-  margin-bottom: -10em;
+  margin-bottom: -20em;
+  margin-top: -1em;
   background-color: #E6B946; }
 
 .header {
-  justify-content: flex-start; }
+  justify-content: flex-start;
+  flex-wrap: nowrap; }
   .header .title {
     align-self: flex-end;
-    padding-bottom: 1em;
-    padding-left: .5em;
+    padding-bottom: 1.4em;
+    padding-left: 1em;
     font-family: pattaya;
-    font-weight: 250;
-    font-size: 38pt;
-    color: #503329; }
+    font-weight: 300;
+    font-size: 45pt;
+    color: #503329;
+    flex-shrink: 10; }
   .header img {
-    padding: 1em; }
+    padding: 1em;
+    padding-left: 2em;
+    max-width: 300px; }
+
+.deco-line-teal {
+  height: 2em;
+  background-color: #99AD93;
+  margin-top: -5px;
+  margin-bottom: -10px; }
+
+.deco-line-orange {
+  height: 2em;
+  background-color: #EA822D;
+  margin-top: -5px;
+  margin-bottom: -10px; }
 
 .deco-line {
-  height: 2em;
+  height: 1.5em;
   background-color: #E0AA98;
   padding-top: -10px;
   margin-top: -25px; }
@@ -7796,4 +7813,69 @@ header {
   background-color: #99AD93;
   font-family: montserrat;
   color: #503329;
-  margin-top: -25px; }
+  margin-top: -25px;
+  height: 1.5em; }
+
+.deco-line-liver {
+  height: 2em;
+  background-color: #503329;
+  margin-top: -10px; }
+
+.libraries {
+  display: flex;
+  flex-direction: column;
+  background-color: #77A26B;
+  height: 80%;
+  width: 80%;
+  margin: 0 auto;
+  border-radius: 15pt;
+  border: 1pt solid #503329; }
+  .libraries .subtitle {
+    font-family: pattaya;
+    color: #503329;
+    font-weight: 100;
+    padding-top: 1em; }
+
+.library {
+  background-color: #E0AA98;
+  border-radius: 15pt;
+  font-family: montserrat;
+  color: #503329;
+  border: 1pt solid #503329; }
+  .library .card-title {
+    color: #503329;
+    font-weight: bold; }
+  .library .card-title:hover {
+    color: #99AD93; }
+  .library button {
+    margin: .2em; }
+
+.bookList {
+  display: flex;
+  flex-direction: row;
+  background-color: #E0AA98;
+  height: 80%;
+  width: 80%;
+  margin: 0 auto;
+  border-radius: 15pt;
+  border: 1pt solid #503329; }
+  .bookList .buttonContainer {
+    justify-content: center;
+    width: 100%; }
+    .bookList .buttonContainer button {
+      background-color: #EA822D;
+      align-self: center;
+      margin-top: .5em;
+      border: 1pt solid #503329;
+      color: #503329; }
+
+.bookCard {
+  width: 250px;
+  max-height: 402px;
+  min-height: 400px;
+  padding: .7em;
+  padding-bottom: 1em;
+  border-radius: 15pt;
+  border: 1pt solid #503329;
+  font-family: Montserrat;
+  background-color: #99AD93; }
