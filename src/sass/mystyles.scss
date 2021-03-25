@@ -1,2 +1,32 @@
 @charset "utf-8";
-@import "./../node_modules/bulma/bulma.sass";
+@import "./../../node_modules/bulma/bulma.sass";
+
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Pattaya&display=swap');
+
+// Set your brand colors
+$rose: #E0AA98;
+$liver: #503329;
+$beige: #BAA36B;
+$green: #77A26B;
+$mustard: #E6B946;
+$orange: #EA822D;
+$teal: #99AD93;
+
+html body{
+    background-color: $beige;
+}
+.header{
+    justify-content: flex-start;
+    background-color: $mustard;
+    .title{
+        align-self: flex-end;
+        padding-bottom: 1em;
+        padding-left: .5em;
+        font-family: pattaya;
+        color: $liver;
+    }
+    img{
+        padding: 1em;
+    }
+}

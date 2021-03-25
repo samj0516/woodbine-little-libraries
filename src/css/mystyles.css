@@ -1,5 +1,6 @@
 /*! bulma.io v0.9.2 | MIT License | github.com/jgthms/bulma */
 /* Bulma Utilities */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Pattaya&display=swap");
 .button, .input, .textarea, .select select, .file-cta,
 .file-name, .pagination-previous,
 .pagination-next,
@@ -7757,3 +7758,18 @@ a.has-text-danger-dark:hover, a.has-text-danger-dark:focus {
 .footer {
   background-color: #fafafa;
   padding: 3rem 1.5rem 6rem; }
+
+html body {
+  background-color: #BAA36B; }
+
+.header {
+  justify-content: flex-start;
+  background-color: #E6B946; }
+  .header .title {
+    align-self: flex-end;
+    padding-bottom: 1em;
+    padding-left: .5em;
+    font-family: pattaya;
+    color: #503329; }
+  .header img {
+    padding: 1em; }

@@ -1,16 +1,19 @@
 import React from "react"
 import { Link } from "react-router-dom"
 import "./Nav.css"
+import '../../css/mystyles.css'
 
 export const NavBar = (props) => {
     return (
 <>
-    <section className="section is-warning is-small">
-        <figure className="image ">
-            <img src="../lfl-logo.png" alt="little free library logo" />
+    <header className="header level is-warning is-small">
+        <figure className="image level">
+            <img src="../lfl-logo_50.png" alt="little free library logo" />
         </figure>
+        
        <h1 className="title">Woodbine's Little Libraries</h1> 
-    </section>
+       
+    </header>
     <nav className="navbar" role="navigation" aria-label="main navigation">
         <div className="navbar-brand">
             <a className="navbar-item" href="https://bulma.io">

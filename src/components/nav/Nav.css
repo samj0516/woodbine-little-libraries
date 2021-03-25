@@ -1,14 +1,4 @@
-.navbar {
-    /* display: flex;
-    flex-wrap: nowrap;
-    justify-content: left;
-    height: 150px; */
-}
-.navbar img{
-    /* height: 538px;
-    width: 660px; */
-}
-.navbar__item {
-    /* flex-basis: 20%;
-    list-style-type: none; */
-}
+/* .title{
+    align-self: flex-end;
+    justify-content: flex-start;
+} */
