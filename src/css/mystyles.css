@@ -7759,17 +7759,41 @@ a.has-text-danger-dark:hover, a.has-text-danger-dark:focus {
   background-color: #fafafa;
   padding: 3rem 1.5rem 6rem; }
 
-html body {
+html {
   background-color: #BAA36B; }
 
-.header {
-  justify-content: flex-start;
+.deco-line-orange {
+  height: 2em;
+  background-color: #EA822D;
+  margin-top: -25px;
+  margin-bottom: -10px; }
+
+header {
+  padding-bottom: -10em;
+  margin-bottom: -10em;
   background-color: #E6B946; }
+
+.header {
+  justify-content: flex-start; }
   .header .title {
     align-self: flex-end;
     padding-bottom: 1em;
     padding-left: .5em;
     font-family: pattaya;
+    font-weight: 250;
+    font-size: 38pt;
     color: #503329; }
   .header img {
     padding: 1em; }
+
+.deco-line {
+  height: 2em;
+  background-color: #E0AA98;
+  padding-top: -10px;
+  margin-top: -25px; }
+
+.navbar {
+  background-color: #99AD93;
+  font-family: montserrat;
+  color: #503329;
+  margin-top: -25px; }

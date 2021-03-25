@@ -6,26 +6,29 @@ import '../../css/mystyles.css'
 export const NavBar = (props) => {
     return (
 <>
-    <header className="header level is-warning is-small">
+    <hr className="deco-line-orange"></hr>
+    <header className="header level is-small">
         <figure className="image level">
             <img src="../lfl-logo_50.png" alt="little free library logo" />
         </figure>
         
        <h1 className="title">Woodbine's Little Libraries</h1> 
        
-    </header>
+    </header><hr className="deco-line"></hr>
     <nav className="navbar" role="navigation" aria-label="main navigation">
         <div className="navbar-brand">
-            <a className="navbar-item" href="https://bulma.io">
-                {/* <img src="" alt="Little Free Library logo" width="164" height="41" /> */}
-            </a>
-
+            <Link className="navbar-item" to="/">Home</Link>
+           
+            <Link className="navbar-item" to="/create">Add Library</Link>
             <a role="button" className="navbar-burger" aria-label="menu" aria-expanded="false">
                 <span aria-hidden="true"></span>
                 <span aria-hidden="true"></span>
                 <span aria-hidden="true"></span>
             </a>
         </div>
+
+           
+        
     </nav>
 </>
     )

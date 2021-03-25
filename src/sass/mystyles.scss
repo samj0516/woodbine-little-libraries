@@ -13,20 +13,48 @@ $mustard: #E6B946;
 $orange: #EA822D;
 $teal: #99AD93;
 
-html body{
+html {
     background-color: $beige;
 }
+.deco-line-orange{
+    height:2em;
+    background-color: $orange;
+    margin-top: -25px;
+    margin-bottom: -10px;
+     
+}
+header{
+    padding-bottom: -10em;
+    margin-bottom: -10em;
+    background-color: $mustard;
+   
+}
+
 .header{
     justify-content: flex-start;
-    background-color: $mustard;
+    
     .title{
         align-self: flex-end;
         padding-bottom: 1em;
         padding-left: .5em;
         font-family: pattaya;
+        font-weight: 250;
+        font-size: 38pt;;
         color: $liver;
     }
     img{
         padding: 1em;
     }
+}
+.deco-line{
+    height:2em;
+    background-color: $rose;
+    padding-top: -10px;
+    margin-top: -25px;
+}
+.navbar{
+    background-color: $teal;
+    font-family: montserrat;
+    color: $liver;
+    margin-top: -25px;
 }
