@@ -4,7 +4,7 @@ export const LibraryContext = createContext()
 
 export const LibraryProvider = (props) => {
     const [libraries, setLibraries] = useState([])
-
+    const [lib, setLib] = useState({})
     const getLibraries = () => {
         return fetch("http://localhost:8088/libraries?_expand=user")
         .then(res => res.json())
@@ -25,6 +25,7 @@ export const LibraryProvider = (props) => {
     const getLibraryById = (id) => {
         return fetch(`http://localhost:8088/libraries/${id}`)
             .then(res => res.json())
+            
     }
 
     const deleteLibrary = (id) => {
@@ -47,7 +48,7 @@ export const LibraryProvider = (props) => {
 
     return (
         <LibraryContext.Provider value={{
-            libraries, getLibraries, addLibrary, getLibraryById, deleteLibrary, updateLibrary
+            libraries, getLibraries, addLibrary, getLibraryById, deleteLibrary, updateLibrary, lib, setLib
         }}>
             {props.children}
         </LibraryContext.Provider>

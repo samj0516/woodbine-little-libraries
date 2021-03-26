@@ -16,13 +16,7 @@ $teal: #99AD93;
 html {
     background-color: $beige;
 }
-.deco-line-orange{
-    height:2em;
-    background-color: $orange;
-    margin-top: -25px;
-    margin-bottom: -10px;
-     
-}
+
 header{
     padding-bottom: -10em;
     margin-bottom: -20em;
@@ -53,7 +47,7 @@ header{
 }
 .deco-line-teal{
     height:2em;
-    background-color: $teal;
+    background-color: $green;
     margin-top: -5px;
     margin-bottom: -10px;
      
@@ -63,6 +57,7 @@ header{
     background-color: $orange;
     margin-top: -5px;
     margin-bottom: -10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
      
 }
 .deco-line{
@@ -70,11 +65,13 @@ header{
     background-color: $rose;
     padding-top: -10px;
     margin-top: -25px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .navbar{
     background-color: $teal;
     font-family: montserrat;
+    font-weight: bolder;
     color: $liver;
     margin-top: -25px;
     height: 1.5em;
@@ -94,6 +91,7 @@ header{
     margin: 0 auto;
     border-radius: 15pt;
     border: 1pt solid $liver;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     .subtitle{
         font-family: pattaya;
         color: $liver;
@@ -108,6 +106,7 @@ header{
     
     color: $liver;
     border: 1pt solid $liver;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     .card-title{
         color: $liver;
         font-weight: bold;
@@ -128,16 +127,29 @@ header{
     margin: 0 auto;
     border-radius: 15pt;
     border: 1pt solid $liver;
-    .buttonContainer{
-        justify-content: center;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    .container{
         width: 100%;
+        h1{
+            font-family: pattaya;
+            color:$liver;
+            padding-left: .5em;
+            margin-top: .5em;
+        }
         button{
             background-color: $orange;
             align-self: center;
             margin-top: .5em;
             border: 1pt solid $liver;
             color: $liver;
+            margin-left: 1em;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
         }
+    }
+   
+    .buttonContainer{
+        width: 100%;
+        
     }
     
 }
@@ -151,4 +163,31 @@ header{
     border: 1pt solid $liver;
     font-family: Montserrat;
     background-color: $teal;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    align-self: center;
+    text-align: center;
+    margin: 1em;
+    button{
+        background-color: $orange;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        border: 1pt solid $liver;
+    }
+}
+.libraryForm{
+    display:block;
+    // flex-direction: row;
+    background-color: $orange;
+    height: 80%;
+    width: 80%;
+    margin: 0 auto;
+    border-radius: 15pt;
+    border: 1pt solid $liver;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    h2{
+        font-family: pattaya;
+        color:$liver;
+        padding-left: .5em;
+        margin-top: .5em;
+    }
+
 }

@@ -2,7 +2,7 @@ import React, { useContext, useState } from "react"
 import { BookContext } from './BookProvider'
 import { useHistory, useParams, Route } from 'react-router-dom'
 import './BookCard.css'
-// import "bulma/css/bulma.css"
+
 export const BookCard = ({ book }) => {
     const history = useHistory()
     const { getBooks, books, updateBook, addTakenBook } = useContext(BookContext)
@@ -39,7 +39,7 @@ export const BookCard = ({ book }) => {
             <img src={book.coverMed} alt="Book Cover" />
         </a>
         <p>{book.pages} pages</p>
-        <button onClick={event => {
+        <button className="button is-small" onClick={event => {
             event.preventDefault()
             handleTakeBook()
         }}>Take Book</button>

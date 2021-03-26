@@ -6,11 +6,15 @@ import { BookCard } from '../book/BookCard'
 
 export const LibraryDetail = () => {
   const { getBooks, books } = useContext(BookContext)
+  const { getLibraryById, lib, setLib } = useContext(LibraryContext)
   const { libraryId } = useParams()
-  const history = useHistory()  
+  const history = useHistory() 
+   
 
   useEffect(() => {
-      getBooks()
+      getLibraryById(libraryId)
+      .then((data) => setLib(data))
+      .then(getBooks)
   }, [])
 
  
@@ -20,8 +24,12 @@ export const LibraryDetail = () => {
   return(<>
     
     <section className="bookList">
+      <div className="container level is-flex is-justify-content-flex-start">
+        <h1 className="subtitle is-1">{lib.name}</h1>
+        <button className="button is-medium has-text-centered" onClick={() => {history.push(`/add/${libraryId}`)}}>+ Add Book</button>
+      </div>
       <div className="buttonContainer is-flex is-justify-content-center">
-    <button className="button is-medium has-text-centered" onClick={() => {history.push(`/add/${libraryId}`)}}>+ Add Book</button>
+    
     </div>
         {
             libraryBooks.map(book => !book.deleted ?

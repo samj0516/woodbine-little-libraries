@@ -1,16 +1,23 @@
-import React, { useState, createContext, useContext } from "react"
+import React, { useState, createContext, useContext, useEffect } from "react"
 import { NewBookContext } from './NewBookProvider'
 import { BookContext } from '../book/BookProvider'
+import { LibraryContext } from '../library/LibraryProvider'
 import { useParams, useHistory } from "react-router-dom"
 export const NewBookPreview = () => {
     const { newBook, isbn } = useContext(NewBookContext)
     const { updateBook, getBooks, addBook } = useContext(BookContext)
+    const { getLibraryById, lib } = useContext(LibraryContext)
     const { libraryId } = useParams()
     const history = useHistory()
     console.log(newBook)
-    const bookCoverLg = newBook.cover ? newBook.cover.large : "./../book-cover-not-found.jpg"
+    let bookCoverLg = newBook.cover ? newBook.cover.large : "./../book-cover-not-found.jpg"
     console.log(bookCoverLg)
-    let bookCoverMed = newBook.cover ? newBook.cover.medium : "./../book-cover-not-found.jpg"
+    let bookCoverMed = newBook.cover ? newBook.cover.medium : "./../book-cover-not-found.jpg";
+    
+    useEffect(() => {
+        getLibraryById(libraryId)
+         
+    }, [])
     
     const handleAddNewBook = () => {
         let currentUser = parseInt(sessionStorage.getItem("app_user_id"))
@@ -48,7 +55,7 @@ export const NewBookPreview = () => {
             <button onClick={event => {
                 event.preventDefault()
                 handleAddNewBook()
-            }}>Add to Library</button>
+            }}>Add to {lib.name} Library</button>
         </div>
         </>
     )
