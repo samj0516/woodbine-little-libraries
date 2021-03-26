@@ -7823,7 +7823,7 @@ header {
   flex-direction: column;
   background-color: #77A26B;
   height: 80%;
-  width: 80%;
+  width: 90%;
   margin: 0 auto;
   border-radius: 15pt;
   border: 1pt solid #503329;
@@ -7854,7 +7854,7 @@ header {
   flex-direction: row;
   background-color: #E0AA98;
   height: 80%;
-  width: 80%;
+  width: 90%;
   margin: 0 auto;
   border-radius: 15pt;
   border: 1pt solid #503329;
@@ -7882,7 +7882,8 @@ header {
   max-height: 402px;
   min-height: 400px;
   padding: .7em;
-  padding-bottom: 1em;
+  padding-bottom: .3em;
+  padding-top: .3em;
   border-radius: 15pt;
   border: 1pt solid #503329;
   font-family: Montserrat;
@@ -7891,6 +7892,8 @@ header {
   align-self: center;
   text-align: center;
   margin: 1em; }
+  .bookCard .bookCard__info {
+    block: relative; }
   .bookCard button {
     background-color: #EA822D;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);

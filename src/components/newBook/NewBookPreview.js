@@ -55,7 +55,7 @@ export const NewBookPreview = () => {
             <button onClick={event => {
                 event.preventDefault()
                 handleAddNewBook()
-            }}>Add to {lib.name} Library</button>
+            }}>Add to {lib.name}</button>
         </div>
         </>
     )

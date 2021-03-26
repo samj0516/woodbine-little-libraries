@@ -32,17 +32,19 @@ export const BookCard = ({ book }) => {
     }
 
     return(<>
-    <section className="card bookCard">
-        <h4 className="bookCard__title has-text-weight-semibold">{book.title}</h4>
-        <p>{book.author}</p>
-        <a href={book.url} target="_blank">
-            <img src={book.coverMed} alt="Book Cover" />
-        </a>
-        <p>{book.pages} pages</p>
-        <button className="button is-small" onClick={event => {
-            event.preventDefault()
-            handleTakeBook()
-        }}>Take Book</button>
+    <section className="column card bookCard">
+        <div className=" bookCard__info">
+            <h4 className="bookCard__title has-text-weight-semibold">{book.title}</h4>
+            <p className="">{book.author}</p>
+            <a className="card-image" href={book.url} target="_blank">
+                <img src={book.coverMed} alt="Book Cover" />
+            </a>
+            <p className="">{book.pages} pages</p>
+            <button className="button is-small" onClick={event => {
+                event.preventDefault()
+                handleTakeBook()
+            }}>Take Book</button>
+        </div>
     </section>
     </>)
 }

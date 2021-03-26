@@ -23,18 +23,17 @@ export const LibraryDetail = () => {
 
   return(<>
     
-    <section className="bookList">
+    <section className="columns bookList">
       <div className="container level is-flex is-justify-content-flex-start">
         <h1 className="subtitle is-1">{lib.name}</h1>
         <button className="button is-medium has-text-centered" onClick={() => {history.push(`/add/${libraryId}`)}}>+ Add Book</button>
       </div>
-      <div className="buttonContainer is-flex is-justify-content-center">
-    
-    </div>
+      
         {
             libraryBooks.map(book => !book.deleted ?
                  <BookCard key={book.id} book={book} /> : <div key={book.id}></div>)
         }
+      
     </section>
   
   </>)
