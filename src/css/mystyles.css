@@ -7759,12 +7759,13 @@ a.has-text-danger-dark:hover, a.has-text-danger-dark:focus {
   background-color: #fafafa;
   padding: 3rem 1.5rem 6rem; }
 
-html {
-  background-color: #BAA36B; }
+html body {
+  background-color: #BAA36B;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column; }
 
 header {
-  padding-bottom: -10em;
-  margin-bottom: -20em;
   margin-top: -1em;
   background-color: #E6B946; }
 
@@ -7774,12 +7775,11 @@ header {
   .header .title {
     align-self: flex-end;
     padding-bottom: 1.4em;
-    padding-left: 1em;
     font-family: pattaya;
     font-weight: 300;
     font-size: 45pt;
     color: #503329;
-    flex-shrink: 10; }
+    flex-shrink: 2; }
   .header img {
     padding: 1em;
     padding-left: 2em;
@@ -7816,7 +7816,27 @@ header {
 .deco-line-liver {
   height: 2em;
   background-color: #503329;
-  margin-top: -10px; }
+  margin-top: -5px; }
+
+.foot {
+  background-color: #E6B946;
+  bottom: 0;
+  left: 0;
+  position: fixed;
+  right: 0;
+  z-index: 30;
+  height: 3em; }
+  .foot .footer-line-liver {
+    height: .8em;
+    background-color: #503329;
+    margin-top: -10px; }
+  .foot .footer-line-teal {
+    height: 1em;
+    background-color: #99AD93;
+    margin-bottom: -30px; }
+  .foot .footer-line-orange {
+    height: .8em;
+    background-color: #EA822D; }
 
 .libraries {
   display: flex;
@@ -7825,6 +7845,7 @@ header {
   height: 80%;
   width: 90%;
   margin: 0 auto;
+  margin-bottom: 7em;
   border-radius: 15pt;
   border: 1pt solid #503329;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); }
@@ -7838,12 +7859,13 @@ header {
   background-color: #E0AA98;
   border-radius: 15pt;
   font-family: montserrat;
+  font-weight: bolder;
   color: #503329;
   border: 1pt solid #503329;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); }
   .library .card-title {
     color: #503329;
-    font-weight: bold; }
+    font-weight: 900; }
   .library .card-title:hover {
     color: #99AD93; }
   .library button {
@@ -7852,10 +7874,13 @@ header {
 .bookList {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
   background-color: #E0AA98;
   height: 80%;
   width: 90%;
   margin: 0 auto;
+  margin-bottom: 7em;
   border-radius: 15pt;
   border: 1pt solid #503329;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); }
@@ -7869,21 +7894,18 @@ header {
     .bookList .container button {
       background-color: #EA822D;
       align-self: center;
-      margin-top: .5em;
+      margin: 1em;
       border: 1pt solid #503329;
       color: #503329;
-      margin-left: 1em;
+      margin-top: .5em;
       box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); }
   .bookList .buttonContainer {
     width: 100%; }
+  .bookList .columns {
+    width: 100%;
+    margin: 0 auto; }
 
 .bookCard {
-  width: 250px;
-  max-height: 402px;
-  min-height: 400px;
-  padding: .7em;
-  padding-bottom: .3em;
-  padding-top: .3em;
   border-radius: 15pt;
   border: 1pt solid #503329;
   font-family: Montserrat;
@@ -7891,9 +7913,11 @@ header {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   align-self: center;
   text-align: center;
-  margin: 1em; }
+  margin: .5em; }
+  .bookCard img {
+    border-radius: 5pt; }
   .bookCard .bookCard__info {
-    block: relative; }
+    flex: 0 1 24%; }
   .bookCard button {
     background-color: #EA822D;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -7903,8 +7927,9 @@ header {
   display: block;
   background-color: #EA822D;
   height: 80%;
-  width: 80%;
+  width: 90%;
   margin: 0 auto;
+  margin-bottom: 2em;
   border-radius: 15pt;
   border: 1pt solid #503329;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); }
@@ -7913,3 +7938,20 @@ header {
     color: #503329;
     padding-left: .5em;
     margin-top: .5em; }
+  .libraryForm .field {
+    margin: 2em;
+    margin-right: 4em;
+    font-family: Montserrat; }
+  .libraryForm .label {
+    margin-top: .3em; }
+  .libraryForm .button {
+    margin-top: 1em;
+    font-family: Montserrat;
+    background-color: #E6B946;
+    border-color: #503329;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); }
+  .libraryForm .input {
+    border-radius: 15pt;
+    border-color: #503329;
+    background-color: #99AD93;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); }

@@ -13,13 +13,16 @@ $mustard: #E6B946;
 $orange: #EA822D;
 $teal: #99AD93;
 
-html {
+html body {
     background-color: $beige;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
 }
 
 header{
-    padding-bottom: -10em;
-    margin-bottom: -20em;
+    // padding-bottom: -10em;
+    // margin-bottom: -20em;
     margin-top: -1em;
     background-color: $mustard;
    
@@ -28,21 +31,23 @@ header{
 .header{
     justify-content: flex-start;
     flex-wrap: nowrap;
+    // height: 235px;
     
     .title{
         align-self: flex-end;
         padding-bottom: 1.4em;
-        padding-left: 1em;
+        // padding-left: 1em;
         font-family: pattaya;
         font-weight: 300;
         font-size: 45pt;;
         color: $liver;
-        flex-shrink: 10;
+        flex-shrink: 2;
     }
     img{
         padding: 1em;
         padding-left: 2em;
         max-width: 300px;
+        // margin:.7em;
     }
 }
 .deco-line-teal{
@@ -79,8 +84,38 @@ header{
 .deco-line-liver{
     height:2em;
     background-color: $liver;
-    margin-top: -10px;
+    margin-top: -5px;
     // margin-bottom: 10px;
+}
+.stickyNav{
+    // position: fixed;
+    // top: 0;
+    // width:100%;
+}
+.foot{
+    background-color: $mustard;
+    bottom: 0;
+    left: 0;
+    position: fixed;
+    right: 0;
+    z-index: 30;
+    height: 3em;
+    .footer-line-liver{
+        height:.8em;
+        background-color: $liver;
+        margin-top: -10px;
+    }
+    .footer-line-teal{
+        height:1em;
+        background-color: $teal;
+        margin-bottom: -30px;
+    }
+    .footer-line-orange{
+        height:.8em;
+        background-color: $orange;
+        // margin-bottom:-2px;
+        // margin-top: -5px;
+    }
 }
 .libraries{
     display:flex;
@@ -89,6 +124,7 @@ header{
     height: 80%;
     width: 90%;
     margin: 0 auto;
+    margin-bottom: 7em;
     border-radius: 15pt;
     border: 1pt solid $liver;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -103,13 +139,13 @@ header{
     background-color: $rose;
     border-radius: 15pt;
     font-family: montserrat;
-    
+    font-weight: bolder;
     color: $liver;
     border: 1pt solid $liver;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     .card-title{
         color: $liver;
-        font-weight: bold;
+        font-weight: 900;
     }
     .card-title:hover {
         color: $teal;
@@ -121,10 +157,13 @@ header{
 .bookList{
     display:flex;
     flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
     background-color: $rose;
     height: 80%;
     width: 90%;
     margin: 0 auto;
+    margin-bottom: 7em;
     border-radius: 15pt;
     border: 1pt solid $liver;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -139,10 +178,10 @@ header{
         button{
             background-color: $orange;
             align-self: center;
-            margin-top: .5em;
+            margin: 1em;
             border: 1pt solid $liver;
             color: $liver;
-            margin-left: 1em;
+            margin-top: .5em;
             box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
         }
     }
@@ -151,15 +190,20 @@ header{
         width: 100%;
         
     }
+    .columns{
+        width: 100%;
+        margin: 0 auto;
+    }
     
 }
 .bookCard{
-    width:250px;
-    max-height: 402px;
-    min-height: 400px;
-    padding: .7em;
-    padding-bottom: .3em;
-    padding-top: .3em;
+    // width:250px;
+    // max-height: 500px;
+    // max-width: 300px;
+    // min-height: 300px;
+    // padding: .7em;
+    // padding-bottom: .5em;
+    // padding-top: .3em;
     border-radius: 15pt;
     border: 1pt solid $liver;
     font-family: Montserrat;
@@ -167,9 +211,15 @@ header{
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     align-self: center;
     text-align: center;
-    margin: 1em;
+    margin: .5em;
+    img {
+        // max-height: 265px;
+        // max-width: 180px;
+        border-radius:5pt;
+        
+    }
     .bookCard__info{
-        block: relative; 
+        flex: 0 1 24%; 
     }
     button{
         background-color: $orange;
@@ -182,8 +232,9 @@ header{
     // flex-direction: row;
     background-color: $orange;
     height: 80%;
-    width: 80%;
+    width: 90%;
     margin: 0 auto;
+    margin-bottom: 2em;
     border-radius: 15pt;
     border: 1pt solid $liver;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -192,6 +243,27 @@ header{
         color:$liver;
         padding-left: .5em;
         margin-top: .5em;
+    }
+    .field{
+        margin: 2em;
+        margin-right: 4em;
+        font-family: Montserrat;
+    }
+    .label{
+        margin-top: .3em;
+    }
+    .button{
+        margin-top: 1em;
+        font-family: Montserrat;
+        background-color: $mustard;
+        border-color: $liver;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+    .input{
+        border-radius: 15pt;
+        border-color: $liver;
+        background-color: $teal;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     }
 
 }

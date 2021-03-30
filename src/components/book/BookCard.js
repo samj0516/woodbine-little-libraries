@@ -33,12 +33,14 @@ export const BookCard = ({ book }) => {
 
     return(<>
     <section className="column card bookCard">
-        <div className=" bookCard__info">
+        <div className="card-image">
+        <a className="image is-3by4" href={book.url} target="_blank">
+            <img src={book.coverMed} alt="Book Cover" />
+        </a>
+        </div>
+        <div className="card-content bookCard__info">
             <h4 className="bookCard__title has-text-weight-semibold">{book.title}</h4>
             <p className="">{book.author}</p>
-            <a className="card-image" href={book.url} target="_blank">
-                <img src={book.coverMed} alt="Book Cover" />
-            </a>
             <p className="">{book.pages} pages</p>
             <button className="button is-small" onClick={event => {
                 event.preventDefault()

@@ -65,34 +65,35 @@ export const LibraryForm = () => {
     return(
         <form className="form libraryForm">
             <h2 className="subtitle is-1 libraryForm__title">{libraryId ? "Edit Library Info" : "Add Library"}</h2>
-            
-                <div className="field">
+            <div className= "field">
+                
                     <label className="label" htmlFor="name">Name of Library:</label>
                     <div className="control">
-                        <input className="input is-medium" type="text" id="name" onChange={handleControlledInputChange} required autoFocus className="form-control" placeholder="Library Name"  value={library.name}/>
+                        <input className="input is-normal" type="text" id="name" onChange={handleControlledInputChange} required autoFocus placeholder="Library Name"  value={library.name}/>
                     </div>
-                </div>
+                
            
-                <div className="field">
+                
                     <label className="label"  htmlFor="address">Address:</label>
-                    <div className="control">
-                        <input className="input is-rounded is-medium is-expanded" type="text" id="address" onChange={handleControlledInputChange} required autoFocus className="form-control" placeholder="123 Memory Lane, Kenosha WI 45678"  value={library.address}/>
+                    <div className="control is-normal">
+                        <input className="input is-normal " type="text" id="address" onChange={handleControlledInputChange} required autoFocus placeholder="123 Memory Lane, Kenosha WI 45678"  value={library.address}/>
                     </div>
-                </div>
+                
             
-                <div className="field">
+                
                     <label className="label"  htmlFor="charterNumber">Charter No.:</label>
-                    <div className="control">
-                        <input className="input is-medium" type="text" id="charterNumber" onChange={handleControlledInputChange} required autoFocus className="form-control" placeholder="1234567"  value={library.charterNumber}/>
+                    <div className="control is-normal">
+                        <input className="input is-normal" type="text" id="charterNumber" onChange={handleControlledInputChange} required autoFocus  placeholder="1234567"  value={library.charterNumber}/>
                     </div>
-                </div>
+                
             
-            <button className="btn"
-                disabled={isLoading}
-                onClick={event => {
-                    event.preventDefault()
-                    handleSaveLibrary()
-                }}>{libraryId ? "Update" : "Add My Library"}</button>
+                <button className="button"
+                    disabled={isLoading}
+                    onClick={event => {
+                        event.preventDefault()
+                        handleSaveLibrary()
+                    }}>{libraryId ? "Update" : "Add My Library"}</button>
+            </div>
         </form>
     )
 } 

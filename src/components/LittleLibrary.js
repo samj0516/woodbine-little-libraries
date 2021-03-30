@@ -5,6 +5,7 @@ import { Register } from "./auth/Register"
 import { userStorageKey } from "./auth/authSettings"
 import { ApplicationViews } from './ApplicationViews'
 import { NavBar } from './nav/Nav.js'
+import { Footer } from './footer/Footer'
 // import 'bulma/css/bulma.css'
 import '../css/mystyles.css'
 export const LittleLibrary = () => (
@@ -16,6 +17,7 @@ export const LittleLibrary = () => (
               {/* //Components that are rendered when the user is authenticated go inside this React fragment */}
               <NavBar />
               <ApplicationViews />
+              <Footer />
             </>
           )
         } else {

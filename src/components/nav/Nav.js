@@ -5,7 +5,8 @@ import '../../css/mystyles.css'
 
 export const NavBar = (props) => {
     return (
-<>
+<>   
+<div className="stickyNav">
     <div className="deco-line-teal"></div>
     <div className="deco-line-orange"></div>
     <header className="header level is-small">
@@ -15,7 +16,9 @@ export const NavBar = (props) => {
         
        <h1 className="title is-size-1-touch is-size-2-mobile has-text-centered-touch">Woodbine's Little Libraries</h1> 
        
-    </header><hr className="deco-line"></hr>
+    </header>
+    
+    <hr className="deco-line"></hr>
     <nav className="navbar" role="navigation" aria-label="main navigation">
         <div className="navbar-brand">
             <Link className="navbar-item" to="/">Home</Link>
@@ -31,6 +34,8 @@ export const NavBar = (props) => {
            
         
     </nav><hr className="deco-line-liver"></hr>
+</div>
+
 </>
     )
 }
