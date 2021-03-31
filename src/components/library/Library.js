@@ -16,7 +16,7 @@ export const Library = ({ library }) => {
     }
     return(
         <>
-        <section className="card library">
+        <section className="column is-4 is-5-mobile card library">
             <Link to={`/detail/${library.id}`}>
                 <h1 className="card-title library__name">{library.name}</h1>
             </Link>

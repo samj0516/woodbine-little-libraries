@@ -7771,19 +7771,22 @@ header {
 
 .header {
   justify-content: flex-start;
-  flex-wrap: nowrap; }
-  .header .title {
-    align-self: flex-end;
+  flex-wrap: nowrap;
+  height: 200px; }
+  .header h1 {
+    justify-self: baseline;
     padding-bottom: 1.4em;
+    margin-left: 1.5em;
     font-family: pattaya;
     font-weight: 300;
     font-size: 45pt;
     color: #503329;
-    flex-shrink: 2; }
+    flex-shrink: 2;
+    margin-top: 2em; }
   .header img {
-    padding: 1em;
+    margin-top: .5em;
     padding-left: 2em;
-    max-width: 300px; }
+    max-width: 250px; }
 
 .deco-line-teal {
   height: 2em;
@@ -7840,7 +7843,9 @@ header {
 
 .libraries {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
   background-color: #77A26B;
   height: 80%;
   width: 90%;
@@ -7849,23 +7854,27 @@ header {
   border-radius: 15pt;
   border: 1pt solid #503329;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); }
-  .libraries .subtitle {
-    font-family: pattaya;
-    color: #503329;
-    font-weight: 100;
-    padding-top: 1em; }
+  .libraries .container {
+    width: 100%; }
+    .libraries .container .subtitle {
+      font-family: pattaya;
+      color: #503329;
+      font-weight: 100;
+      padding-top: 1em; }
 
 .library {
+  flex-direction: column;
   background-color: #E0AA98;
   border-radius: 15pt;
   font-family: montserrat;
   font-weight: bolder;
   color: #503329;
-  border: 1pt solid #503329;
+  border: 1.5pt solid #503329;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); }
   .library .card-title {
     color: #503329;
-    font-weight: 900; }
+    font-weight: 900;
+    font-size: 16pt; }
   .library .card-title:hover {
     color: #99AD93; }
   .library button {
@@ -7875,17 +7884,18 @@ header {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-around;
   background-color: #E0AA98;
   height: 80%;
   width: 90%;
   margin: 0 auto;
-  margin-bottom: 7em;
+  margin-bottom: 5em;
   border-radius: 15pt;
   border: 1pt solid #503329;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); }
   .bookList .container {
-    width: 100%; }
+    width: 110%;
+    display: flow-root; }
     .bookList .container h1 {
       font-family: pattaya;
       color: #503329;
@@ -7901,23 +7911,22 @@ header {
       box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); }
   .bookList .buttonContainer {
     width: 100%; }
-  .bookList .columns {
-    width: 100%;
-    margin: 0 auto; }
 
 .bookCard {
   border-radius: 15pt;
   border: 1pt solid #503329;
   font-family: Montserrat;
+  color: #503329;
   background-color: #99AD93;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   align-self: center;
   text-align: center;
   margin: .5em; }
   .bookCard img {
+    width: 100%;
     border-radius: 5pt; }
   .bookCard .bookCard__info {
-    flex: 0 1 24%; }
+    flex: 0 1 50%; }
   .bookCard button {
     background-color: #EA822D;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -7929,7 +7938,7 @@ header {
   height: 80%;
   width: 90%;
   margin: 0 auto;
-  margin-bottom: 2em;
+  margin-bottom: 7em;
   border-radius: 15pt;
   border: 1pt solid #503329;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); }

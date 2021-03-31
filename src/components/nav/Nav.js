@@ -14,7 +14,7 @@ export const NavBar = (props) => {
             <img src="../lfl-logo_50.png" alt="little free library logo" />
         </figure>
         
-       <h1 className="title is-size-1-touch is-size-2-mobile has-text-centered-touch">Woodbine's Little Libraries</h1> 
+       <h1 className="title is-size-2-touch is-size-6-mobile has-text-centered-touch">Woodbine's Little Libraries</h1> 
        
     </header>
     

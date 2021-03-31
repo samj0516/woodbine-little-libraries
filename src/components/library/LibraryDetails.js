@@ -28,13 +28,13 @@ export const LibraryDetail = () => {
         <h1 className="subtitle is-1">{lib.name}</h1>
         <button className="button is-medium has-text-centered" onClick={() => {history.push(`/add/${libraryId}`)}}>+ Add Book</button>
       </div>
-      <div className="columns">
+      
       
         {
             libraryBooks.map(book => !book.deleted ?
                  <BookCard key={book.id} book={book} /> : <div key={book.id}></div>)
         }
-      </div>
+      
     </section>
   
   </>)

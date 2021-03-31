@@ -32,10 +32,10 @@ export const BookCard = ({ book }) => {
     }
 
     return(<>
-    <section className="column card bookCard">
+    <section className="column is-2 is-5-mobile card bookCard">
         <div className="card-image">
         <a className="image is-3by4" href={book.url} target="_blank">
-            <img src={book.coverMed} alt="Book Cover" />
+            <img src={book.coverMed}  alt="Book Cover" />
         </a>
         </div>
         <div className="card-content bookCard__info">
