@@ -35,14 +35,15 @@ header{
     
     h1{
         // justify-self: baseline;
-        padding-bottom: 1.4em;
+        // padding-bottom: 1.4em;
         margin-left: 1.5em;
         font-family: pattaya;
         font-weight: 300;
-        font-size: 45pt;;
+        font-size: 52pt;;
         color: $liver;
         flex-shrink: 2;
-        margin-top: 2em;
+        text-align: center;
+        // margin-top: 2em;
     }
     .figure{
         background-color: $mustard;
@@ -93,6 +94,8 @@ header{
     // margin-bottom: 10px;
 }
 .stickyNav{
+    max-height: fit-content;
+    min-height: min-content;
     // position: fixed;
     // top: 0;
     // width:100%;
@@ -131,7 +134,7 @@ header{
     height: 80%;
     width: 90%;
     margin: 0 auto;
-    margin-bottom: 7em;
+    margin-bottom: 5em;
     border-radius: 15pt;
     border: 1pt solid $liver;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -170,7 +173,7 @@ header{
     display:flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-evenly;
     background-color: $rose;
     height: 80%;
     width: 90%;

@@ -10,11 +10,11 @@ export const NavBar = (props) => {
     <div className="deco-line-teal"></div>
     <div className="deco-line-orange"></div>
     <header className="header level is-small">
-        <figure className="image level">
-            <img className="is-hidden-mobile" src="../lfl-logo_50.png" alt="little free library logo" />
+        <figure className="image level has-text-centered-touch">
+            <img className="" src="../lfl-logo_50.png" alt="little free library logo" />
         </figure>
         
-       <h1 className="title is-size-2-touch is-size-6-mobile has-text-centered-touch">Woodbine's Little Libraries</h1> 
+       <h1 className="title is-size-2-touch is-size-6-mobile has-text-centered">Woodbine's Little Free Libraries</h1> 
        
     </header>
     

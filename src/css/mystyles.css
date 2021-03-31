@@ -7775,14 +7775,13 @@ header {
   justify-content: flex-start;
   flex-wrap: nowrap; }
   .header h1 {
-    padding-bottom: 1.4em;
     margin-left: 1.5em;
     font-family: pattaya;
     font-weight: 300;
-    font-size: 45pt;
+    font-size: 52pt;
     color: #503329;
     flex-shrink: 2;
-    margin-top: 2em; }
+    text-align: center; }
   .header .figure {
     background-color: #E6B946; }
   .header img {
@@ -7823,6 +7822,10 @@ header {
   background-color: #503329;
   margin-top: -5px; }
 
+.stickyNav {
+  max-height: fit-content;
+  min-height: min-content; }
+
 .foot {
   background-color: #E6B946;
   bottom: 0;
@@ -7852,7 +7855,7 @@ header {
   height: 80%;
   width: 90%;
   margin: 0 auto;
-  margin-bottom: 7em;
+  margin-bottom: 5em;
   border-radius: 15pt;
   border: 1pt solid #503329;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); }
@@ -7886,7 +7889,7 @@ header {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: space-evenly;
   background-color: #E0AA98;
   height: 80%;
   width: 90%;
