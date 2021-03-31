@@ -7766,15 +7766,15 @@ html body {
   flex-direction: column; }
 
 header {
+  padding-bottom: -10em;
+  margin-bottom: -20em;
   margin-top: -1em;
   background-color: #E6B946; }
 
 .header {
   justify-content: flex-start;
-  flex-wrap: nowrap;
-  height: 200px; }
+  flex-wrap: nowrap; }
   .header h1 {
-    justify-self: baseline;
     padding-bottom: 1.4em;
     margin-left: 1.5em;
     font-family: pattaya;
@@ -7783,6 +7783,8 @@ header {
     color: #503329;
     flex-shrink: 2;
     margin-top: 2em; }
+  .header .figure {
+    background-color: #E6B946; }
   .header img {
     margin-top: .5em;
     padding-left: 2em;
