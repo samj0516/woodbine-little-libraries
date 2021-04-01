@@ -42,6 +42,7 @@ export const NewBookPreview = () => {
     return( 
         <>
         <div className="newBookPreview">
+            <h1 className="subtitle is-1">Add this book?</h1>
             <div className="newBookPreviewCard">
                 <h1>{newBook.title}</h1>
                 <h3>By: {newBook.authors[0].name}</h3>
@@ -49,7 +50,7 @@ export const NewBookPreview = () => {
                   <img src={bookCoverLg} alt="Cover of book" />
                 </a>
                 <p>{newBook.number_of_pages} pages</p>
-                <p>Click book cover for more information</p>
+                <p>Click cover for more info</p>
                 
             </div>
             <button onClick={event => {

@@ -224,6 +224,7 @@ header{
     background-color: $teal;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     align-self: center;
+    justify-content: space-evenly;
     text-align: center;
     margin: .5em;
     img {
@@ -280,3 +281,76 @@ header{
     }
 
 }
+
+.newBookLookupForm{
+    background-color: $orange;
+    height: 80%;
+    width: 90%;
+    margin: 0 auto;
+    margin-bottom: 7em;
+    padding: .5em;
+    border-radius: 15pt;
+    border: 1pt solid $liver;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    h2{
+        font-family: pattaya;
+        color:$liver;
+        padding-left: .3em;
+        margin-top: .5em;
+    }
+    fieldset{
+        margin-left: 5em;
+    }
+    .button{
+        margin-top: 1em;
+        margin-left: 10em;
+        margin-bottom: 1em;
+        font-family: Montserrat;
+        font-weight: bolder;
+        background-color: $green;
+        border-color: $liver;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+
+}
+.newBookPreview {
+    border: 1px solid black;
+    border-radius: 10px;
+    margin: 0 auto;
+    margin-bottom: 7em;
+    padding: .5em;
+    display: flex;
+    width: 500px;
+    justify-content: space-between;
+    flex-direction: column;
+    background-color:#E0AA98;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    h1{
+        font-family: pattaya;
+        color: $liver;
+        font-weight: 100;
+        padding-left: .3em;
+        // padding-top: 1em;
+    }
+    .newBookPreview button {
+        /* width: 50%; */
+        align-self: center;
+    }
+    .newBookPreviewCard {
+        border: .5px dotted black;
+        border-radius: 10px;
+        display: flex;
+        /* flex-wrap: wrap; */
+        flex-direction: column;
+        padding: .5em;
+        margin:.5em;
+        justify-content: center;
+        align-self: center;
+        img {
+            height: 475px;
+            width: 322px;
+        }
+        
+    }
+    
+} 
