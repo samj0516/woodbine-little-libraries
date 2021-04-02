@@ -32,21 +32,26 @@ export const BookCard = ({ book }) => {
     }
 
     return(<>
-    <section className="column is-2 is-5-mobile card bookCard">
-        <div className="card-image">
-        <a className="image is-3by4" href={book.url} target="_blank">
+    <section className="card bookCard">
+        
+        <a className="image" href={book.url} target="_blank">
             <img src={book.coverMed}  alt="Book Cover" />
         </a>
-        </div>
+        
         <div className="card-content bookCard__info">
-            <h4 className="bookCard__title has-text-weight-semibold">{book.title}</h4>
-            <p className="">{book.author}</p>
-            <p className="">{book.pages} pages</p>
-            <button className="button is-small" onClick={event => {
+        <button className="button is-small" onClick={event => {
                 event.preventDefault()
                 handleTakeBook()
             }}>Take Book</button>
+            <a className="image" href={book.url} target="_blank">
+                <h4 className="bookCard__title has-text-weight-semibold">{book.title}</h4>
+            </a>
+            <p className="">{book.author}</p>
+            <p className="">{book.pages} pages</p>
+            
         </div>
     </section>
     </>)
 }
+
+// column is-2 is-5-mobile

@@ -173,12 +173,12 @@ header{
     display:flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    // justify-content: space-evenly;
     background-color: $rose;
     height: 80%;
     width: 90%;
     margin: 0 auto;
-    margin-bottom: 5em;
+    margin-bottom: 7em;
     border-radius: 15pt;
     border: 1pt solid $liver;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -203,27 +203,24 @@ header{
     }
     .col-container{
         display: flex;
+        flex-direction: row;
         width: 100%;
         flex-wrap: wrap;
         justify-content: space-evenly;
+        padding: 2em;
     }
    
     
     
     
 }
-.bookCard{
-    // width:250px;
-    // max-height: 500px;
-    // max-width: 300px;
-    // min-height: 300px;
-    // padding: .7em;
-    // padding-bottom: .5em;
-    // padding-top: .3em;
-    flex: 1;
-    border-radius: 15pt;
+.bookCard {
+    
+    position: relative;
+    border-radius: 10pt;
     border: 1pt solid $liver;
-    font-family: Montserrat;
+    width: 20%;
+    height: auto;
     color: $liver;
     background-color: $teal;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -231,19 +228,46 @@ header{
     justify-content: space-evenly;
     text-align: center;
     margin: .5em;
+    
     img {
-        width: 100%;
-        border-radius:5pt;
+        display:block;
+        width: 90%;
+        height: auto;
+        margin: 0 auto;
+        // border-radius:5pt;
         
     }
-    .bookCard__info{
-        flex: 0 1 50%; 
+    .card-content{
+        position: absolute;
+        bottom: 0;
+        background: rgb(0, 0, 0);
+        background: rgba(0, 0, 0, 0.5); /* Black see-through */
+        color: #f1f1f1;
+        width: 100%;
+        transition: .5s ease;
+        opacity:0;
+        color: white;
+        font-size: 20px;
+        font-family: Montserrat;
+        padding: 20px;
+        justify-content: center;
+        text-align: center;
+        h4{
+            color:white;
+        } 
+        h4:hover{
+            color:$rose;
+        }
+        button{
+            background-color: $orange;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            border: 1pt solid $liver;
+        }
     }
-    button{
-        background-color: $orange;
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-        border: 1pt solid $liver;
-    }
+   
+}
+.bookCard:hover .card-content {
+    opacity: 1;
 }
 .libraryForm{
     display:block;
@@ -318,7 +342,7 @@ header{
 
 }
 .newBookPreview {
-    border: 1px solid black;
+    border: 1pt solid $liver;
     border-radius: 10px;
     margin: 0 auto;
     margin-bottom: 7em;
@@ -347,7 +371,7 @@ header{
     }
     .newBookPreviewCard {
         background-color: $rose;
-        border: .5px dotted black;
+        border: 1pt solid $liver;
         border-radius: 10px;
         display: flex;
         /* flex-wrap: wrap; */
@@ -357,6 +381,7 @@ header{
         justify-content: center;
         align-self: center;
         text-align: center;
+        font-family: Montserrat;
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
         .image {
             height: auto;
