@@ -7914,10 +7914,14 @@ header {
       color: #503329;
       margin-top: .5em;
       box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); }
-  .bookList .buttonContainer {
-    width: 100%; }
+  .bookList .col-container {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-evenly; }
 
 .bookCard {
+  flex: 1;
   border-radius: 15pt;
   border: 1pt solid #503329;
   font-family: Montserrat;
@@ -8005,20 +8009,26 @@ header {
   margin-bottom: 7em;
   padding: .5em;
   display: flex;
-  width: 500px;
+  width: 80%;
+  height: 80%;
   justify-content: space-between;
   flex-direction: column;
-  background-color: #E0AA98;
+  background-color: #EA822D;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); }
   .newBookPreview h1 {
     font-family: pattaya;
     color: #503329;
     font-weight: 100;
     padding-left: .3em; }
-  .newBookPreview .newBookPreview button {
+  .newBookPreview button {
     /* width: 50%; */
-    align-self: center; }
+    align-self: center;
+    background-color: #77A26B;
+    border-color: #503329;
+    border-radius: 15pt;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); }
   .newBookPreview .newBookPreviewCard {
+    background-color: #E0AA98;
     border: .5px dotted black;
     border-radius: 10px;
     display: flex;
@@ -8027,7 +8037,15 @@ header {
     padding: .5em;
     margin: .5em;
     justify-content: center;
-    align-self: center; }
-    .newBookPreview .newBookPreviewCard img {
-      height: 475px;
-      width: 322px; }
+    align-self: center;
+    text-align: center;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); }
+    .newBookPreview .newBookPreviewCard .image {
+      height: auto;
+      width: 100%;
+      max-width: 322px;
+      justify-content: center;
+      align-self: center;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); }
+    .newBookPreview .newBookPreviewCard h1 {
+      font-family: Montserrat; }

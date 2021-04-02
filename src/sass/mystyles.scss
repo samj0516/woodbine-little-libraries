@@ -201,11 +201,14 @@ header{
             box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
         }
     }
-   
-    .buttonContainer{
+    .col-container{
+        display: flex;
         width: 100%;
-        
+        flex-wrap: wrap;
+        justify-content: space-evenly;
     }
+   
+    
     
     
 }
@@ -217,6 +220,7 @@ header{
     // padding: .7em;
     // padding-bottom: .5em;
     // padding-top: .3em;
+    flex: 1;
     border-radius: 15pt;
     border: 1pt solid $liver;
     font-family: Montserrat;
@@ -320,10 +324,11 @@ header{
     margin-bottom: 7em;
     padding: .5em;
     display: flex;
-    width: 500px;
+    width: 80%;
+    height: 80%;
     justify-content: space-between;
     flex-direction: column;
-    background-color:#E0AA98;
+    background-color: $orange;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     h1{
         font-family: pattaya;
@@ -332,11 +337,16 @@ header{
         padding-left: .3em;
         // padding-top: 1em;
     }
-    .newBookPreview button {
+    button {
         /* width: 50%; */
         align-self: center;
+        background-color: $green;
+        border-color: $liver;
+        border-radius: 15pt;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     }
     .newBookPreviewCard {
+        background-color: $rose;
         border: .5px dotted black;
         border-radius: 10px;
         display: flex;
@@ -346,9 +356,19 @@ header{
         margin:.5em;
         justify-content: center;
         align-self: center;
-        img {
-            height: 475px;
-            width: 322px;
+        text-align: center;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        .image {
+            height: auto;
+            width: 100%;
+            max-width: 322px;
+            justify-content: center;
+            align-self: center;
+            // height: 50%;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+        h1{
+            font-family: Montserrat;
         }
         
     }
