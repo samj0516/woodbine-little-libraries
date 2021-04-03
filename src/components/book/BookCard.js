@@ -32,17 +32,26 @@ export const BookCard = ({ book }) => {
     }
 
     return(<>
-    <section className="bookCard">
-        <h4 className="bookCard__title">{book.title}</h4>
-        <p>{book.author}</p>
-        <a href={book.url} target="_blank">
-            <img src={book.coverMed} alt="Book Cover" />
+    <section className="card bookCard">
+        
+        <a className="image" href={book.url} target="_blank">
+            <img src={book.coverMed}  alt="Book Cover" />
         </a>
-        <p>{book.pages} pages</p>
-        <button onClick={event => {
-            event.preventDefault()
-            handleTakeBook()
-        }}>Take Book</button>
+        
+        <div className="card-content bookCard__info">
+        <button className="button is-small" onClick={event => {
+                event.preventDefault()
+                handleTakeBook()
+            }}>Take Book</button>
+            <a className="image" href={book.url} target="_blank">
+                <h4 className="bookCard__title has-text-weight-semibold">{book.title}</h4>
+            </a>
+            <p className="">{book.author}</p>
+            <p className="">{book.pages} pages</p>
+            
+        </div>
     </section>
     </>)
 }
+
+// column is-2 is-5-mobile

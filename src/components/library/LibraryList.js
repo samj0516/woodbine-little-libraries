@@ -14,7 +14,9 @@ export const LibraryList = () => {
     return (
         <>
         <div className="libraries">
-            <h4>Pick a library to select a book...</h4>
+            <div className="container level is-flex is-justify-content-flex-start">
+                <h4 className="subtitle is-1">Pick a library to select a book...</h4>
+            </div>
             {
                 libraries.map(library =>
                      { return <Library key={library.id} library={library} />})

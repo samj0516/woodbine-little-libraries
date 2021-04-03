@@ -16,22 +16,29 @@ export const Library = ({ library }) => {
     }
     return(
         <>
-        <section className="library">
+        <section className="column is-4 card library">
             <Link to={`/detail/${library.id}`}>
-                <h4 className="library__name">{library.name}</h4>
+                <h1 className="card-title library__name">{library.name}</h1>
             </Link>
+            <div className="card-content">
             <div className="library__address">{library.address}</div>
             <div className="library__charter">Charter# {library.charterNumber}</div>
-            <div>
-                {currentUser === library.userId ?  <button onClick={() => {
-                history.push(`/edit/${library.id}`)
-            }}>Edit my library</button> : <div></div>}
-            </div>
-            <div>
-                {currentUser === library.userId ?  <button onClick={handleDelete}
-            >Delete my library</button> : <div></div>}
             </div>
             
+            
+                {currentUser === library.userId ?  <button className="button is-small is-warning" onClick={() => {
+                history.push(`/edit/${library.id}`)
+            }}>  <span className="icon is-small">
+                        <i className="far fa-edit"></i>
+                </span></button> : <div></div>}
+            
+            
+                {currentUser === library.userId ?  <button className="button is-small is-danger" onClick={handleDelete}
+                ><span className="icon is-small">
+                    <i className="fas fa-times"></i>
+                </span></button> : <div></div>}
+            
+                
         </section>
         </>
     )

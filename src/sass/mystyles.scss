@@ -1,0 +1,407 @@
+@charset "utf-8";
+@import "./../../node_modules/bulma/bulma.sass";
+
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Pattaya&display=swap');
+
+// Set your brand colors
+$rose: #E0AA98;
+$liver: #503329;
+$beige: #BAA36B;
+$green: #77A26B;
+$mustard: #E6B946;
+$orange: #EA822D;
+$teal: #99AD93;
+
+html body {
+    background-color: $beige;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+header{
+    padding-bottom: -10em;
+    margin-bottom: -20em;
+    margin-top: -1em;
+    background-color: $mustard;
+   
+}
+
+.header{
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+    // min-height: 200px;
+    
+    h1{
+        // justify-self: baseline;
+        // padding-bottom: 1.4em;
+        margin-left: 1.5em;
+        font-family: pattaya;
+        font-weight: 300;
+        font-size: 52pt;;
+        color: $liver;
+        flex-shrink: 2;
+        text-align: center;
+        // margin-top: 2em;
+    }
+    .figure{
+        background-color: $mustard;
+    }
+    img{
+        // padding: 1em;
+        margin-top: .5em;
+        padding-left: 2em;
+        max-width: 275px;
+        // margin:.7em;
+    }
+}
+.deco-line-teal{
+    height:2em;
+    background-color: $green;
+    margin-top: -5px;
+    margin-bottom: -10px;
+     
+}
+.deco-line-orange{
+    height:2em;
+    background-color: $orange;
+    margin-top: -5px;
+    margin-bottom: -10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+     
+}
+.deco-line{
+    height:1.5em;
+    background-color: $rose;
+    padding-top: -10px;
+    margin-top: -25px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.navbar{
+    background-color: $teal;
+    font-family: montserrat;
+    font-weight: bolder;
+    color: $liver;
+    margin-top: -25px;
+    height: 1.5em;
+}
+.deco-line-liver{
+    height:2em;
+    background-color: $liver;
+    margin-top: -5px;
+    // margin-bottom: 10px;
+}
+.stickyNav{
+    max-height: fit-content;
+    min-height: min-content;
+    // position: fixed;
+    // top: 0;
+    // width:100%;
+}
+.foot{
+    background-color: $mustard;
+    bottom: 0;
+    left: 0;
+    position: fixed;
+    right: 0;
+    z-index: 30;
+    height: 3em;
+    .footer-line-liver{
+        height:.8em;
+        background-color: $liver;
+        margin-top: -10px;
+    }
+    .footer-line-teal{
+        height:1em;
+        background-color: $teal;
+        margin-bottom: -30px;
+    }
+    .footer-line-orange{
+        height:.8em;
+        background-color: $orange;
+        // margin-bottom:-2px;
+        // margin-top: -5px;
+    }
+}
+.libraries{
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    background-color: $green;
+    height: 80%;
+    width: 90%;
+    margin: 0 auto;
+    margin-bottom: 5em;
+    border-radius: 15pt;
+    border: 1pt solid $liver;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    .container{
+        width: 100%;
+       .subtitle{
+            font-family: pattaya;
+            color: $liver;
+            font-weight: 100;
+            padding-top: 1em;
+        }
+    }
+}
+.library{
+    flex-direction: column;
+    background-color: $rose;
+    border-radius: 15pt;
+    font-family: montserrat;
+    font-weight: bolder;
+    color: $liver;
+    border: 1.5pt solid $liver;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    .card-title{
+        color: $liver;
+        font-weight: 900;
+        font-size: 16pt;
+    }
+    .card-title:hover {
+        color: $teal;
+    }
+    button{
+        margin: .2em;
+    }
+}
+.bookList{
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    // justify-content: space-evenly;
+    background-color: $rose;
+    height: 80%;
+    width: 90%;
+    margin: 0 auto;
+    margin-bottom: 7em;
+    border-radius: 15pt;
+    border: 1pt solid $liver;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    .container{
+        width: 110%;
+        
+        h1{
+            font-family: pattaya;
+            color:$liver;
+            justify-content: flex-start;
+            padding-left: .5em;
+            margin-top: .5em;
+            font-size: 48pt;
+        }
+        button{
+            background-color: $orange;
+            align-self: center;
+            margin: 1em;
+            border: 1pt solid $liver;
+            color: $liver;
+            margin-top: .5em;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+    }
+    .col-container{
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        padding: 2em;
+    }
+   
+    
+    
+    
+}
+.bookCard {
+    
+    position: relative;
+    border-radius: 10pt;
+    border: 1pt solid $liver;
+    width: 20%;
+    height: auto;
+    color: $liver;
+    background-color: $teal;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    align-self: center;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+    margin: .5em;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    
+    img {
+        display:block;
+        width: 90%;
+        height: auto;
+        margin: 0 auto;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        // border-radius:5pt;
+        
+    }
+    .card-content{
+        position: absolute;
+        bottom: 0;
+        background: rgb(0, 0, 0);
+        background: rgba(0, 0, 0, 0.6); /* Black see-through */
+        color: #f1f1f1;
+        width: 100%;
+        transition: .5s ease;
+        opacity:0;
+        color: white;
+        font-size: 20px;
+        font-family: Montserrat;
+        padding: 20px;
+        justify-content: center;
+        text-align: center;
+        h4{
+            color:white;
+        } 
+        h4:hover{
+            color:$rose;
+        }
+        button{
+            background-color: $orange;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            border: 1pt solid $liver;
+        }
+    }
+   
+}
+.bookCard:hover .card-content {
+    opacity: 1;
+}
+.libraryForm{
+    display:block;
+    // flex-direction: row;
+    background-color: $orange;
+    height: 80%;
+    width: 90%;
+    margin: 0 auto;
+    margin-bottom: 7em;
+    border-radius: 15pt;
+    border: 1pt solid $liver;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    h2{
+        font-family: pattaya;
+        color:$liver;
+        padding-left: .5em;
+        margin-top: .5em;
+    }
+    .field{
+        margin: 2em;
+        margin-right: 4em;
+        font-family: Montserrat;
+    }
+    .label{
+        margin-top: .3em;
+    }
+    .button{
+        margin-top: 1em;
+        font-family: Montserrat;
+        background-color: $mustard;
+        border-color: $liver;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+    .input{
+        border-radius: 15pt;
+        border-color: $liver;
+        background-color: $teal;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+
+}
+
+.newBookLookupForm{
+    background-color: $orange;
+    height: 80%;
+    width: 90%;
+    margin: 0 auto;
+    margin-bottom: 7em;
+    padding: .5em;
+    border-radius: 15pt;
+    border: 1pt solid $liver;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    h2{
+        font-family: pattaya;
+        color:$liver;
+        padding-left: .3em;
+        margin-top: .5em;
+    }
+    fieldset{
+        margin-left: 5em;
+    }
+    .button{
+        margin-top: 1em;
+        margin-left: 10em;
+        margin-bottom: 1em;
+        font-family: Montserrat;
+        font-weight: bolder;
+        background-color: $green;
+        border-color: $liver;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+
+}
+.newBookPreview {
+    border: 1pt solid $liver;
+    border-radius: 10px;
+    margin: 0 auto;
+    margin-bottom: 7em;
+    padding: .5em;
+    display: flex;
+    width: 80%;
+    height: 80%;
+    justify-content: space-between;
+    flex-direction: column;
+    background-color: $orange;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    h1{
+        font-family: pattaya;
+        color: $liver;
+        font-weight: 100;
+        padding-left: .3em;
+        // padding-top: 1em;
+    }
+    button {
+        /* width: 50%; */
+        align-self: center;
+        background-color: $green;
+        border-color: $liver;
+        border-radius: 15pt;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+    .newBookPreviewCard {
+        background-color: $rose;
+        border: 1pt solid $liver;
+        border-radius: 10px;
+        display: flex;
+        /* flex-wrap: wrap; */
+        flex-direction: column;
+        padding: .5em;
+        margin:.5em;
+        justify-content: center;
+        align-self: center;
+        text-align: center;
+        font-family: Montserrat;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        .image {
+            height: auto;
+            width: 100%;
+            max-width: 322px;
+            justify-content: center;
+            align-self: center;
+            // height: 50%;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+        h1{
+            font-family: Montserrat;
+        }
+        
+    }
+    
+} 

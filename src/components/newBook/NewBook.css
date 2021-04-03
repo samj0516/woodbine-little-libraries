@@ -1,32 +1,8 @@
-.newBookPreview {
-    border: 1px solid black;
-    border-radius: 10px;
-    margin: 5em;
-    padding: 2em;
-    display: flex;
-    width: 500px;
-    justify-content: space-between;
-    flex-direction: column;
-    background-color:#e8c2ca;
-    
-} 
-.newBookPreview button {
-    /* width: 50%; */
-    align-self: center;
-}
 
-.newBookPreviewCard {
-    border: .5px dotted black;
-    border-radius: 10px;
-    display: flex;
-    /* flex-wrap: wrap; */
-    flex-direction: column;
-    padding: .5em;
-    margin:.5em;
-    justify-content: center;
-    align-self: center;
-    
-}
+
+
+
+/* .newBookPreviewCard  */
 
 /* display: flex;
     flex-wrap: wrap;
