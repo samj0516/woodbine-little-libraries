@@ -7787,7 +7787,7 @@ header {
   .header img {
     margin-top: .5em;
     padding-left: 2em;
-    max-width: 250px; }
+    max-width: 275px; }
 
 .deco-line-teal {
   height: 2em;
@@ -7898,13 +7898,14 @@ header {
   border: 1pt solid #503329;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); }
   .bookList .container {
-    width: 110%;
-    display: flow-root; }
+    width: 110%; }
     .bookList .container h1 {
       font-family: pattaya;
       color: #503329;
+      justify-content: flex-start;
       padding-left: .5em;
-      margin-top: .5em; }
+      margin-top: .5em;
+      font-size: 48pt; }
     .bookList .container button {
       background-color: #EA822D;
       align-self: center;
@@ -7932,18 +7933,22 @@ header {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   align-self: center;
   justify-content: space-evenly;
+  align-items: center;
   text-align: center;
-  margin: .5em; }
+  margin: .5em;
+  padding-top: 10px;
+  padding-bottom: 10px; }
   .bookCard img {
     display: block;
     width: 90%;
     height: auto;
-    margin: 0 auto; }
+    margin: 0 auto;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); }
   .bookCard .card-content {
     position: absolute;
     bottom: 0;
     background: black;
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.6);
     /* Black see-through */
     color: #f1f1f1;
     width: 100%;
