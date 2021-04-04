@@ -1,11 +1,11 @@
-import React, { useContext, useState } from "react"
+import React, { useContext } from "react"
 import { BookContext } from './BookProvider'
-import { useHistory, useParams, Route } from 'react-router-dom'
+import { useHistory, useParams } from 'react-router-dom'
 import './BookCard.css'
 
 export const BookCard = ({ book }) => {
     const history = useHistory()
-    const { getBooks, books, updateBook, addTakenBook } = useContext(BookContext)
+    const { updateBook, addTakenBook } = useContext(BookContext)
     const { libraryId } = useParams()
     let currentUser = parseInt(sessionStorage.getItem('app_user_id'))
     const handleTakeBook = () => {
@@ -43,7 +43,7 @@ export const BookCard = ({ book }) => {
                 event.preventDefault()
                 handleTakeBook()
             }}>Take Book</button>
-            <a className="image" href={book.url} target="_blank">
+            <a className="image" href={book.url} target="_blank" rel="noreferrer" >
                 <h4 className="bookCard__title has-text-weight-semibold">{book.title}</h4>
             </a>
             <p className="">{book.author}</p>

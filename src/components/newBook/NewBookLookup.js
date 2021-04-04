@@ -1,10 +1,10 @@
-import React, { useContext, useEffect, useState } from "react"
+import React, { useContext } from "react"
 import { useHistory, useParams } from 'react-router-dom';
 import { NewBookContext } from './NewBookProvider'
 import './NewBook.css'
 
 export const NewBookLookup = () => {
-    const { setNewBook, newBook, getNewBook, isbn, setIsbn } = useContext(NewBookContext)
+    const { getNewBook, isbn, setIsbn } = useContext(NewBookContext)
     const history = useHistory()
     const { libraryId } = useParams()
     const handleInputChange = (event) => {

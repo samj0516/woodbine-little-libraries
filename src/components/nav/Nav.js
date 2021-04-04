@@ -24,11 +24,7 @@ export const NavBar = (props) => {
             <Link className="navbar-item" to="/">Home</Link>
            
             <Link className="navbar-item" to="/create">Add Library</Link>
-            <a role="button" className="navbar-burger" aria-label="menu" aria-expanded="false">
-                <span aria-hidden="true"></span>
-                <span aria-hidden="true"></span>
-                <span aria-hidden="true"></span>
-            </a>
+            
         </div>
 
            
@@ -41,13 +37,3 @@ export const NavBar = (props) => {
 }
 
 
-
-{/* <ul className="navbar">
-            <li className="navbar__item active">
-                <Link className="navbar__link" to="/">Libraries</Link>
-            </li>
-            <li className="navbar__item">
-                <Link className="navbar__link" to="/create">Add Library</Link>
-            </li>
-            
-        </ul> */}
