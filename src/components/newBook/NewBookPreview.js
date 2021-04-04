@@ -1,11 +1,11 @@
-import React, { useState, createContext, useContext, useEffect } from "react"
+import React, { useContext, useEffect } from "react"
 import { NewBookContext } from './NewBookProvider'
 import { BookContext } from '../book/BookProvider'
 import { LibraryContext } from '../library/LibraryProvider'
 import { useParams, useHistory } from "react-router-dom"
 export const NewBookPreview = () => {
     const { newBook, isbn } = useContext(NewBookContext)
-    const { updateBook, getBooks, addBook } = useContext(BookContext)
+    const { addBook } = useContext(BookContext)
     const { getLibraryById, lib } = useContext(LibraryContext)
     const { libraryId } = useParams()
     const history = useHistory()
@@ -46,7 +46,7 @@ export const NewBookPreview = () => {
             <div className="newBookPreviewCard">
                 <h1 className="title is-3">{newBook.title}</h1>
                 <h3 className="subtitle is-5">By: {newBook.authors[0].name}</h3>
-                <a className="image " href={newBook.url} target="_blank">
+                <a className="image " href={newBook.url} target="_blank" rel="noreferrer" >
                   <img className="" src={bookCoverLg} alt="Cover of book" />
                 </a>
                 <p className="subtitle is-4">{newBook.number_of_pages} pages</p>

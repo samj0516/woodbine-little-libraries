@@ -1,5 +1,5 @@
-import React, { useContext, useState }  from "react"
-import { Link, useHistory, useParams } from 'react-router-dom'
+import React, { useContext }  from "react"
+import { Link, useHistory } from 'react-router-dom'
 import { LibraryContext } from './LibraryProvider'
 
 import './Library.css'
@@ -7,9 +7,19 @@ import './Library.css'
 
 export const Library = ({ library }) => {
     const history = useHistory();
-    const { getLibraries, updateLibrary, deleteLibrary} = useContext(LibraryContext)
+    const { deleteLibrary} = useContext(LibraryContext)
     let currentUser = parseInt(sessionStorage.getItem('app_user_id'))
-    const { libraryId } = useParams()
+    
+    
+    const mapQuery = () => {
+        const address = library.address
+        const searchOne = ' ';
+        const replaceOne = '+'; 
+        let loc = address.replaceAll(searchOne, replaceOne)
+        let mapUrl = `https://www.google.com/maps/place/${loc}`
+        return mapUrl
+    }
+   
     
     const handleDelete = () => {
         deleteLibrary(library.id)
@@ -21,7 +31,9 @@ export const Library = ({ library }) => {
                 <h1 className="card-title library__name">{library.name}</h1>
             </Link>
             <div className="card-content">
-            <div className="library__address">{library.address}</div>
+            <a href={mapQuery()} target="_blank" rel="noreferrer" >
+                <div className="library__address">{library.address}</div>
+            </a>
             <div className="library__charter">Charter# {library.charterNumber}</div>
             </div>
             

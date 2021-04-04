@@ -5,7 +5,7 @@ import './Library.css'
 
 
 export const LibraryForm = () => {
-    const { getLibraries, addLibrary, getLibraryById, updateLibrary, lib, setLib} = useContext(LibraryContext)
+    const { getLibraries, addLibrary, getLibraryById, updateLibrary } = useContext(LibraryContext)
 
     const [library, setLibrary] = useState({
         id: 0,
@@ -64,7 +64,7 @@ export const LibraryForm = () => {
 
     return(
         <form className="form libraryForm">
-            <h2 className="subtitle is-1 libraryForm__title">{libraryId ? "Edit Library Info" : "Add Library"}</h2>
+            <h2 className="subtitle is-1 libraryForm__title">{libraryId ? `Edit ${library.name} Info` : "Add Library"}</h2>
             <div className= "field">
                 
                     <label className="label" htmlFor="name">Name of Library:</label>
