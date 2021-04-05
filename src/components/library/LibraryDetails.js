@@ -20,7 +20,7 @@ export const LibraryDetail = () => {
  
 
   let libraryBooks = books.filter(book => parseInt(libraryId) === book.libraryId)
-
+  let notDeletedBooks = libraryBooks.filter(book => book.deleted === false)
   return(<>
     
     <section className="bookList">
@@ -31,11 +31,12 @@ export const LibraryDetail = () => {
       <div className="col-container">
       
         {
-            libraryBooks.map(book => !book.deleted ?
-                 <BookCard key={book.id} book={book} /> : <div key={book.id}></div>)
+            notDeletedBooks.map(book => 
+                 <BookCard key={book.id} book={book} /> )
         }
       </div>
     </section>
   
   </>)
 }
+

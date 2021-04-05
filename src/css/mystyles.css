@@ -7765,11 +7765,16 @@ html body {
   min-height: 100vh;
   flex-direction: column; }
 
+body {
+  background-image: url("https://img.freepik.com/free-photo/seamless-brown-color-lumber-arrows-chevron-pattern-center-top-view_46370-2765.jpg?size=626&ext=jpg");
+  background-size: 100%, 100%; }
+
 header {
   padding-bottom: -10em;
   margin-bottom: -20em;
   margin-top: -1em;
-  background-color: #E6B946; }
+  background-color: #E6B946;
+  max-height: 205px; }
 
 .header {
   justify-content: flex-start;
@@ -7822,10 +7827,6 @@ header {
   background-color: #503329;
   margin-top: -5px; }
 
-.stickyNav {
-  max-height: fit-content;
-  min-height: min-content; }
-
 .foot {
   background-color: #E6B946;
   bottom: 0;
@@ -7840,7 +7841,7 @@ header {
     margin-top: -10px; }
   .foot .footer-line-teal {
     height: 1em;
-    background-color: #99AD93;
+    background-color: #77A26B;
     margin-bottom: -30px; }
   .foot .footer-line-orange {
     height: .8em;
@@ -7857,6 +7858,7 @@ header {
   margin: 0 auto;
   margin-bottom: 5em;
   border-radius: 15pt;
+  padding-bottom: 1em;
   border: 1pt solid #503329;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); }
   .libraries .container {
@@ -7976,7 +7978,7 @@ header {
   display: block;
   background-color: #EA822D;
   height: 80%;
-  width: 90%;
+  width: 60%;
   margin: 0 auto;
   margin-bottom: 7em;
   border-radius: 15pt;
@@ -7997,6 +7999,7 @@ header {
     margin-top: 1em;
     font-family: Montserrat;
     background-color: #E6B946;
+    font-weight: bold;
     border-color: #503329;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); }
   .libraryForm .input {
@@ -8008,7 +8011,7 @@ header {
 .newBookLookupForm {
   background-color: #EA822D;
   height: 80%;
-  width: 90%;
+  width: 60%;
   margin: 0 auto;
   margin-bottom: 7em;
   padding: .5em;
@@ -8020,27 +8023,33 @@ header {
     color: #503329;
     padding-left: .3em;
     margin-top: .5em; }
-  .newBookLookupForm fieldset {
-    margin-left: 5em; }
+  .newBookLookupForm .field {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 5em;
+    font-family: Montserrat;
+    font-size: 16pt;
+    font-weight: bold; }
   .newBookLookupForm .button {
     margin-top: 1em;
-    margin-left: 10em;
+    margin-left: 1em;
     margin-bottom: 1em;
     font-family: Montserrat;
-    font-weight: bolder;
+    font-weight: bold;
     background-color: #77A26B;
     border-color: #503329;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); }
 
 .newBookPreview {
-  border: 1pt solid #503329;
+  border: 3pt solid #503329;
   border-radius: 10px;
   margin: 0 auto;
-  margin-bottom: 7em;
+  margin-bottom: 5em;
   padding: .5em;
   display: flex;
-  width: 80%;
-  height: 80%;
+  width: 70%;
+  height: 75%;
   justify-content: space-between;
   flex-direction: column;
   background-color: #EA822D;
@@ -8049,7 +8058,9 @@ header {
     font-family: pattaya;
     color: #503329;
     font-weight: 100;
-    padding-left: .3em; }
+    font-size: 40pt;
+    padding-left: .3em;
+    padding-top: .3em; }
   .newBookPreview button {
     /* width: 50%; */
     align-self: center;
@@ -8062,11 +8073,15 @@ header {
     border: 1pt solid #503329;
     border-radius: 10px;
     display: flex;
+    opacity: 1;
     /* flex-wrap: wrap; */
     flex-direction: column;
-    padding: .5em;
+    padding: 5em;
     margin: .5em;
+    margin-top: 0;
     justify-content: center;
+    padding-top: 2em;
+    padding-bottom: 2em;
     align-self: center;
     text-align: center;
     font-family: Montserrat;
@@ -8079,4 +8094,7 @@ header {
       align-self: center;
       box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); }
     .newBookPreview .newBookPreviewCard h1 {
-      font-family: Montserrat; }
+      font-family: Montserrat;
+      font-weight: bold; }
+    .newBookPreview .newBookPreviewCard .details {
+      padding-top: 1em; }

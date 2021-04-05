@@ -42,19 +42,22 @@ export const NewBookPreview = () => {
     return( 
         <>
         <div className="newBookPreview">
-            <h1 className="subtitle is-1">Add this book?</h1>
+            <h1 className="subtitle">Add this book?</h1>
             <div className="newBookPreviewCard">
                 <h1 className="title is-3">{newBook.title}</h1>
                 <h3 className="subtitle is-5">By: {newBook.authors[0].name}</h3>
                 <a className="image " href={newBook.url} target="_blank" rel="noreferrer" >
                   <img className="" src={bookCoverLg} alt="Cover of book" />
                 </a>
-                <p className="subtitle is-4">{newBook.number_of_pages} pages</p>
-                <p className="subtitle is-6">Click cover for more info</p>
+                <div className="details">
+                    <p className="title is-4">{newBook.number_of_pages} pages</p>
+                    <p className="subtitle is-6">Click cover for more info</p>
+                
                 <button className="button" onClick={event => {
                 event.preventDefault()
                 handleAddNewBook()
             }}>+Add to {lib.name}</button>
+                </div>
             </div>
            
         </div>
