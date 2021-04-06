@@ -7766,15 +7766,15 @@ html body {
   flex-direction: column; }
 
 body {
-  background-image: url("https://img.freepik.com/free-photo/seamless-brown-color-lumber-arrows-chevron-pattern-center-top-view_46370-2765.jpg?size=626&ext=jpg");
-  background-size: 100%, 100%; }
+  background-size: 100%, 100%;
+  background-image: url("https://i.pinimg.com/originals/37/88/cb/3788cb64d92a1046e03f16843dcc643e.png"); }
 
 header {
   padding-bottom: -10em;
   margin-bottom: -20em;
   margin-top: -1em;
   background-color: #E6B946;
-  max-height: 205px; }
+  max-height: 200px; }
 
 .header {
   justify-content: flex-start;
@@ -7786,10 +7786,12 @@ header {
     font-size: 52pt;
     color: #503329;
     flex-shrink: 2;
-    text-align: center; }
+    text-align: center;
+    margin-top: .5em; }
   .header .figure {
     background-color: #E6B946; }
   .header img {
+    padding-top: .5em;
     margin-top: .5em;
     padding-left: 2em;
     max-width: 275px; }
@@ -7820,7 +7822,7 @@ header {
   font-weight: bolder;
   color: #503329;
   margin-top: -25px;
-  height: 1.5em; }
+  max-height: 1em; }
 
 .deco-line-liver {
   height: 2em;
@@ -7853,26 +7855,29 @@ header {
   flex-wrap: wrap;
   justify-content: space-evenly;
   background-color: #77A26B;
-  height: 80%;
+  height: 75%;
   width: 90%;
   margin: 0 auto;
+  margin-top: 2em;
   margin-bottom: 5em;
   border-radius: 15pt;
   padding-bottom: 1em;
   border: 1pt solid #503329;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); }
   .libraries .container {
-    width: 100%; }
+    width: 100%;
+    height: auto; }
     .libraries .container .subtitle {
       font-family: pattaya;
       color: #503329;
       font-weight: 100;
-      padding-top: 1em; }
+      padding-top: .3em; }
 
 .library {
   flex-direction: column;
   background-color: #E0AA98;
   border-radius: 15pt;
+  margin: .5em;
   font-family: montserrat;
   font-weight: bolder;
   color: #503329;
@@ -7969,7 +7974,9 @@ header {
     .bookCard .card-content button {
       background-color: #EA822D;
       box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-      border: 1pt solid #503329; }
+      border: 1pt solid #503329;
+      font-weight: bold;
+      font-size: 10pt; }
 
 .bookCard:hover .card-content {
   opacity: 1; }

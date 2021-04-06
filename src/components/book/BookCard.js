@@ -42,7 +42,7 @@ export const BookCard = ({ book }) => {
         <button className="button is-small" onClick={event => {
                 event.preventDefault()
                 handleTakeBook()
-            }}>Take Book</button>
+            }}>Take</button>
             <a className="image" href={book.url} target="_blank" rel="noreferrer" >
                 <h4 className="bookCard__title has-text-weight-semibold">{book.title}</h4>
             </a>

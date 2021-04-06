@@ -22,15 +22,16 @@ html body {
     flex-direction: column;
 }
 body{
-    background-image: url("https://img.freepik.com/free-photo/seamless-brown-color-lumber-arrows-chevron-pattern-center-top-view_46370-2765.jpg?size=626&ext=jpg");
+    // background-image: url("https://img.freepik.com/free-photo/seamless-brown-color-lumber-arrows-chevron-pattern-center-top-view_46370-2765.jpg?size=626&ext=jpg");
     background-size: 100%, 100%;
+    background-image: url("https://i.pinimg.com/originals/37/88/cb/3788cb64d92a1046e03f16843dcc643e.png");
 }
 header{
     padding-bottom: -10em;
     margin-bottom: -20em;
     margin-top: -1em;
     background-color: $mustard;
-    max-height: 205px;
+    max-height: 200px;
 }
 
 .header{
@@ -48,13 +49,13 @@ header{
         color: $liver;
         flex-shrink: 2;
         text-align: center;
-        // margin-top: 2em;
+        margin-top: .5em;
     }
     .figure{
         background-color: $mustard;
     }
     img{
-        // padding: 1em;
+        padding-top: .5em;
         margin-top: .5em;
         padding-left: 2em;
         max-width: 275px;
@@ -90,7 +91,7 @@ header{
     font-weight: bolder;
     color: $liver;
     margin-top: -25px;
-    height: 1.5em;
+    max-height: 1em;
 }
 .deco-line-liver{
     height:2em;
@@ -136,9 +137,10 @@ header{
     flex-wrap: wrap;
     justify-content: space-evenly;
     background-color: $green;
-    height: 80%;
+    height: 75%;
     width: 90%;
     margin: 0 auto;
+    margin-top: 2em;
     margin-bottom: 5em;
     border-radius: 15pt;
     padding-bottom: 1em;
@@ -146,11 +148,12 @@ header{
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     .container{
         width: 100%;
+        height: auto;
        .subtitle{
             font-family: pattaya;
             color: $liver;
             font-weight: 100;
-            padding-top: 1em;
+            padding-top: .3em;
         }
     }
 }
@@ -158,6 +161,7 @@ header{
     flex-direction: column;
     background-color: $rose;
     border-radius: 15pt;
+    margin: .5em;
     font-family: montserrat;
     font-weight: bolder;
     color: $liver;
@@ -181,6 +185,7 @@ header{
     flex-wrap: wrap;
     // justify-content: space-evenly;
     background-color: $rose;
+    // opacity: 0.8;
     height: 80%;
     width: 90%;
     margin: 0 auto;
@@ -274,6 +279,8 @@ header{
             background-color: $orange;
             box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
             border: 1pt solid $liver;
+            font-weight: bold;
+            font-size: 10pt;
         }
     }
    
