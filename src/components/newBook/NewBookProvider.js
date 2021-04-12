@@ -16,7 +16,7 @@ export const NewBookProvider = (props) => {
    
 
     const addNewBook = (bookObj) => {
-        return fetch("http://localhost:8088/books", {
+        return fetch("https://little-library-api.herokuapp.com/books", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"

@@ -6,13 +6,13 @@ export const LibraryProvider = (props) => {
     const [libraries, setLibraries] = useState([])
     const [lib, setLib] = useState({})
     const getLibraries = () => {
-        return fetch("http://localhost:8088/libraries?_expand=user")
+        return fetch("https://little-library-api.herokuapp.com/libraries?_expand=user")
         .then(res => res.json())
         .then(setLibraries)
     }
 
     const addLibrary = (library) => {
-        return fetch("http://localhost:8088/libraries",  {
+        return fetch("https://little-library-api.herokuapp.com/libraries",  {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -23,20 +23,20 @@ export const LibraryProvider = (props) => {
     }
 
     const getLibraryById = (id) => {
-        return fetch(`http://localhost:8088/libraries/${id}`)
+        return fetch(`https://little-library-api.herokuapp.com/libraries/${id}`)
             .then(res => res.json())
             
     }
 
     const deleteLibrary = (id) => {
-        return fetch(`http://localhost:8088/libraries/${id}`, {
+        return fetch(`https://little-library-api.herokuapp.com/libraries/${id}`, {
             method: "DELETE"
         })
             .then(getLibraries)
     }
 
     const updateLibrary = library => {
-        return fetch(`http://localhost:8088/libraries/${library.id}`, {
+        return fetch(`https://little-library-api.herokuapp.com/libraries/${library.id}`, {
           method: "PUT",
           headers: {
             "Content-Type": "application/json"
