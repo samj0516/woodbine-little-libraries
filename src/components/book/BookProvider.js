@@ -7,7 +7,7 @@ export const BookProvider = (props) => {
     const [takenBooks, setTakenBooks] = useState([])
 
     const getBooks = () => {
-        return fetch("http://localhost:8088/books?_expand=user&_expand=library")
+        return fetch("https://little-library-api.herokuapp.com/books?_expand=user&_expand=library")
         .then(res => res.json())
         .then(setBooks)
     }
@@ -24,12 +24,12 @@ export const BookProvider = (props) => {
     }
 
     const getBookById = (id) => {
-        return fetch(`http://localhost:8088/books/${id}?_expand=library&_expand=user`)
+        return fetch(`https://little-library-api.herokuapp.com/books/${id}?_expand=library&_expand=user`)
         .then(res => res.json())
     }
 
     const updateBook = book => {
-        return fetch(`http://localhost:8088/books/${book.id}`, {
+        return fetch(`https://little-library-api.herokuapp.com/books/${book.id}`, {
             method: "PUT",
             headers: {
                 "Content-Type": "application/json"
@@ -40,7 +40,7 @@ export const BookProvider = (props) => {
     }
 
     const addTakenBook = (takenObj) => {
-        return fetch("http://localhost:8088/takenBooks", {
+        return fetch("https://little-library-api.herokuapp.com/takenBooks", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -51,7 +51,7 @@ export const BookProvider = (props) => {
     }
 
     const getTakenBooks = () => {
-        return fetch("http://localhost:8088/takenBooks")
+        return fetch("https://little-library-api.herokuapp.com/takenBooks")
         .then(res => res.json())
         .then(setTakenBooks)
     }
