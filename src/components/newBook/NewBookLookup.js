@@ -24,13 +24,15 @@ export const NewBookLookup = () => {
     return(
         <form className="newBookLookupForm">
             <h2 className="subtitle is-1 newBookLookupForm__title">Add Your Book...</h2>
-            <fieldset>
+            <div className="field">
                 <label htmlFor="isbn">Enter ISBN #: </label>
-                <input type="text" id="isbn" onChange={handleInputChange}  required autoFocus className="form-control" placeholder="" />
-            </fieldset>
-            <button className="button is-small" onClick={e => {
+                <div className="control">
+                    <input className="input is-normal" type="text" id="isbn" onChange={handleInputChange}  required autoFocus placeholder="" />
+                </div>
+            <button className="button is-normal" onClick={e => {
                 e.preventDefault()
                 handleNewBookLookup()}}>Find Book</button>
+            </div>
         </form>
     )
 } 

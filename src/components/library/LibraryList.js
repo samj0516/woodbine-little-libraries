@@ -9,6 +9,7 @@ export const LibraryList = () => {
     const { libraryId } = useParams()
     useEffect(() => {
         getLibraries()
+        
     }, [])
 
    
