@@ -1,5 +1,5 @@
 import React from "react"
-import { Route } from "react-router-dom"
+import { Route, Redirect } from "react-router-dom"
 import { LibraryProvider } from './library/LibraryProvider'
 import { LibraryList } from './library/LibraryList'
 import { LibraryForm } from "./library/LibraryForm"
@@ -8,6 +8,8 @@ import { NewBookLookup } from './newBook/NewBookLookup'
 import { BookProvider } from './book/BookProvider'
 import { NewBookPreview } from "./newBook/NewBookPreview"
 import { LibraryDetail } from './library/LibraryDetails'
+import { Login } from './auth/Login'
+import { Register } from './auth/Register'
 
 
 export const ApplicationViews = () => {
@@ -18,9 +20,9 @@ export const ApplicationViews = () => {
         <Route exact path="/">
             <LibraryList />
         </Route>
-        <Route path="/create">
-            <LibraryForm />
-        </Route>
+        <Route exact path="/create" render={() => localStorage.getItem("app_user_id") ? <LibraryForm /> : <Redirect to="/login" />} />
+            
+        
         <Route path="/edit/:libraryId(\d+)">
             <LibraryForm />
             <LibraryDetail />
@@ -39,6 +41,13 @@ export const ApplicationViews = () => {
         </NewBookProvider>
         </LibraryProvider>
         </BookProvider>
+        
+        <Route path="/login">
+            <Login />
+        </Route>
+        <Route path="/register">
+            <Register />
+        </Route>
         
         </>
     )
