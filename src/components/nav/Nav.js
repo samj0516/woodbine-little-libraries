@@ -1,9 +1,24 @@
-import React from "react"
+import React, { useEffect, useContext, useState } from "react"
 import { Link } from "react-router-dom"
+import { UserContext } from "../user/UserProvider"
 import "./Nav.css"
 import '../../css/mystyles.css'
 
 export const NavBar = (props) => {
+    const { getUserById } = useContext(UserContext)
+    let currentUser = parseInt(sessionStorage.getItem("app_user_id"))
+    const [userObj, setUserObj] = useState({})
+    useEffect(() => {
+        if(currentUser){
+            getUserById(currentUser)
+            .then(res => {
+                setUserObj(res)
+            })
+        }
+       
+    }, [])
+   
+     
     return (
 <>   
 <div className="stickyNav">
@@ -21,6 +36,7 @@ export const NavBar = (props) => {
     <hr className="deco-line"></hr>
     <nav className="navbar" role="navigation" aria-label="main navigation">
         <div className="navbar-brand">
+            <Link className="navbar-item is-right" to="/login">{currentUser ? `Welcome, ${userObj.name}!` : "Login"}</Link>
             <Link className="navbar-item" to="/">Home</Link>
            
             <Link className="navbar-item" to="/create">Add Library</Link>
