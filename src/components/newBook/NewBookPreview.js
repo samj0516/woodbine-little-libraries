@@ -18,11 +18,16 @@ export const NewBookPreview = () => {
         getLibraryById(libraryId)
          
     }, [])
-    
+    const currentUser = ()=>{
+        if (sessionStorage.getItem("app_user_id")){
+            return parseInt(sessionStorage.getItem("app_user_id"))
+        }else{
+            return 1 
+        }
+    }
     const handleAddNewBook = () => {
-        let currentUser = parseInt(sessionStorage.getItem("app_user_id"))
         addBook({
-            userId: currentUser,
+            userId: currentUser(),
             libraryId: parseInt(libraryId),
             deleted: false,
             title: newBook.title,
